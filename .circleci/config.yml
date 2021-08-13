@@ -1,0 +1,14 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: ishiko/gcc-ishiko-cpp:0.4.0
+    steps:
+      - run: 
+          name: "Set NEMU_FRAMEWORK environment variable and create workspace directory"
+          command: mkdir -p /projects/nemu-framework && echo 'export NEMU_FRAMEWORK="/projects/nemu-framework"' >> $BASH_ENV
+      - checkout:
+          path: /projects/nemu-framework/core
+      - run:
+          name: Build Core
+          command: cd /projects/nemu-framework/core/build/gnumake && make
