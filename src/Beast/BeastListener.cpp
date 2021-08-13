@@ -1,5 +1,5 @@
 /*
-    Copyright (c) 2019 Xavier Leclercq
+    Copyright (c) 2019-2021 Xavier Leclercq
 
     Permission is hereby granted, free of charge, to any person obtaining a
     copy of this software and associated documentation files (the "Software"),
@@ -23,6 +23,7 @@
 #include "BeastListener.h"
 #include "BeastServer.h"
 #include "BeastSession.h"
+#include "ErrorCategory.h"
 
 namespace Nemu
 {
@@ -35,7 +36,7 @@ BeastListener::BeastListener(BeastServer& server, boost::asio::io_context& ioCon
     m_acceptor.open(endpoint.protocol(), ec);
     if (ec)
     {
-        error.fail(ec.value(), ec.message(), __FILE__, __LINE__);
+        Fail(error, ec.value(), ec.message(), __FILE__, __LINE__);
         return;
     }
     m_acceptor.set_option(boost::asio::socket_base::reuse_address(true), ec);
