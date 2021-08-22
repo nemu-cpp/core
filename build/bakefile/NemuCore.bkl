@@ -15,17 +15,17 @@ library NemuCore : IshikoErrors, G3log, Boost
 {
     archs = x86 x86_64;
    
-    includedirs += ../../../include/NemuFramework/Nemu/Core;
+    includedirs += ../../include/NemuFramework/Nemu/Core;
 
     if ($(toolset) == gnu)
     {
         cxx-compiler-options = "-std=c++17";
-        outputdir = ../../../Lib;
+        outputdir = ../../lib;
     }
 
     if ($(toolset) != gnu)
     {
-        outputdir = ../../../Lib/$(arch);
+        outputdir = ../../lib/$(arch);
     }
 
     if ($(config) == Debug)
@@ -35,28 +35,23 @@ library NemuCore : IshikoErrors, G3log, Boost
 
     headers
     {
-        ../../../include/NemuFramework/Nemu/Core/Configuration.h
-        ../../../include/NemuFramework/Nemu/Core/Application.h
-        ../../../include/NemuFramework/Nemu/Core/Applications.h
-        ../../../include/NemuFramework/Nemu/Core/ErrorCategory.h
-        ../../../include/NemuFramework/Nemu/Core/Server.h
-        ../../../include/NemuFramework/Nemu/Core/Servers.h
-        ../../../include/NemuFramework/Nemu/Core/Log.h
-        ../../../include/NemuFramework/Nemu/Core/WebApplication.h
-        ../../../include/NemuFramework/Nemu/Core/Route.h
-        ../../../include/NemuFramework/Nemu/Core/Routes.h
-        ../../../include/NemuFramework/Nemu/Core/WebRequest.h
-        ../../../include/NemuFramework/Nemu/Core/WebResponseBuilder.h
-        ../../../include/NemuFramework/Nemu/Core/AccessLog.h
-        ../../../include/NemuFramework/Nemu/Core/Views.h
-        ../../../include/NemuFramework/Nemu/Core/TemplatingEngine.h
-        ../../../include/NemuFramework/Nemu/Core/linkoptions.h
+        ../../include/NemuFramework/Nemu/Core/Configuration.h
+        ../../include/NemuFramework/Nemu/Core/Application.h
+        ../../include/NemuFramework/Nemu/Core/Applications.h
+        ../../include/NemuFramework/Nemu/Core/ErrorCategory.h
+        ../../include/NemuFramework/Nemu/Core/Server.h
+        ../../include/NemuFramework/Nemu/Core/Servers.h
+        ../../include/NemuFramework/Nemu/Core/Log.h
+        ../../include/NemuFramework/Nemu/Core/WebApplication.h
+        ../../include/NemuFramework/Nemu/Core/Route.h
+        ../../include/NemuFramework/Nemu/Core/Routes.h
+        ../../include/NemuFramework/Nemu/Core/WebRequest.h
+        ../../include/NemuFramework/Nemu/Core/WebResponseBuilder.h
+        ../../include/NemuFramework/Nemu/Core/AccessLog.h
+        ../../include/NemuFramework/Nemu/Core/Views.h
+        ../../include/NemuFramework/Nemu/Core/TemplatingEngine.h
+        ../../include/NemuFramework/Nemu/Core/linkoptions.h
 
-        ../../src/Beast/BeastServer.h
-        ../../src/Beast/BeastListener.h
-        ../../src/Beast/BeastSession.h
-        ../../src/Beast/BeastRequest.h
-        ../../src/Beast/BeastResponseBuilder.h
         ../../src/ControlHandlerRegistration.h
     }
 
@@ -78,11 +73,6 @@ library NemuCore : IshikoErrors, G3log, Boost
         ../../src/Views.cpp
         ../../src/TemplatingEngine.cpp
 
-        ../../src/Beast/BeastServer.cpp
-        ../../src/Beast/BeastListener.cpp
-        ../../src/Beast/BeastSession.cpp
-        ../../src/Beast/BeastRequest.cpp
-        ../../src/Beast/BeastResponseBuilder.cpp
         ../../src/ControlHandlerRegistration.cpp
     }
 }

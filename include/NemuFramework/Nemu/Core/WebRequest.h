@@ -20,29 +20,20 @@
     IN THE SOFTWARE.
 */
 
-#ifndef _NEMUFRAMEWORK_NEMU_BEAST_BEASTRESPONSEBUILDER_H_
-#define _NEMUFRAMEWORK_NEMU_BEAST_BEASTRESPONSEBUILDER_H_
+#ifndef _NEMUFRAMEWORK_NEMU_CORE_WEBREQUEST_H_
+#define _NEMUFRAMEWORK_NEMU_CORE_WEBREQUEST_H_
 
-#include "WebResponseBuilder.h"
-#include <boost/beast/http.hpp>
+#include <string>
 
 namespace Nemu
 {
 
-class BeastResponseBuilder : public WebResponseBuilder
+/// An interface to the request that was received from the client.
+class WebRequest
 {
 public:
-    BeastResponseBuilder(const Views& views);
-    void initialize(const boost::beast::http::request<boost::beast::http::string_body>& request);
-    void reset();
-
-    void setStatus(unsigned int status) override;
-    std::string& body() override;
-
-    boost::beast::http::response<boost::beast::http::string_body>& response();
-
-private:
-    boost::beast::http::response<boost::beast::http::string_body> m_response;
+    /// Returns the URI part of the request.
+    virtual std::string URI() const = 0;
 };
 
 }

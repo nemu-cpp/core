@@ -20,40 +20,46 @@
     IN THE SOFTWARE.
 */
 
-#include "BeastResponseBuilder.h"
+#ifndef _NEMUFRAMEWORK_NEMU_CORE_WEBAPPLICATION_H_
+#define _NEMUFRAMEWORK_NEMU_CORE_WEBAPPLICATION_H_
+
+#include "Application.h"
+#include "Configuration.h"
+#include "Routes.h"
+#include "Views.h"
+#include "Ishiko/Errors/Error.h"
+#include <vector>
+#include <memory>
 
 namespace Nemu
 {
 
-BeastResponseBuilder::BeastResponseBuilder(const Views& views)
-    : WebResponseBuilder(views)
+/// An application that serves requests over the HTTP or HTTPS protocol.
+class WebApplication : public Application
 {
-}
+public:
+    /// Constructor.
+    /**
+        @param configuration The configuration for the application.
+        @param observer The observer to add.
+        @param error The result of the constructor.
+    */
+    WebApplication(const Configuration& configuration, std::shared_ptr<Observer> observer, Ishiko::Error& error);
+    WebApplication(const Configuration& configuration, std::shared_ptr<Routes> routes,
+        std::shared_ptr<Observer> observer, Ishiko::Error& error);
 
-void BeastResponseBuilder::initialize(const boost::beast::http::request<boost::beast::http::string_body>& request)
-{
-    m_response = boost::beast::http::response<boost::beast::http::string_body>();
-    m_response.keep_alive(request.keep_alive());
-}
+    /// Returns the routes.
+    Routes& routes();
 
-void BeastResponseBuilder::reset()
-{
-    m_response = boost::beast::http::response<boost::beast::http::string_body>();
-}
+    Views& views();
 
-void BeastResponseBuilder::setStatus(unsigned int status)
-{
-    m_response.result(status);
-}
-
-std::string& BeastResponseBuilder::body()
-{
-    return m_response.body();
-}
-
-boost::beast::http::response<boost::beast::http::string_body>& BeastResponseBuilder::response()
-{
-    return m_response;
-}
+private:
+    std::shared_ptr<Routes> m_routes;
+    Views m_views;
+};
 
 }
+
+#include "linkoptions.h"
+
+#endif
