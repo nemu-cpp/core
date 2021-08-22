@@ -165,11 +165,6 @@
     <ClCompile Include="..\..\src\AccessLog.cpp" />
     <ClCompile Include="..\..\src\Views.cpp" />
     <ClCompile Include="..\..\src\TemplatingEngine.cpp" />
-    <ClCompile Include="..\..\src\Beast\BeastServer.cpp" />
-    <ClCompile Include="..\..\src\Beast\BeastListener.cpp" />
-    <ClCompile Include="..\..\src\Beast\BeastSession.cpp" />
-    <ClCompile Include="..\..\src\Beast\BeastRequest.cpp" />
-    <ClCompile Include="..\..\src\Beast\BeastResponseBuilder.cpp" />
     <ClCompile Include="..\..\src\ControlHandlerRegistration.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -189,11 +184,6 @@
     <ClInclude Include="..\..\include\NemuFramework\Nemu\Core\Views.h" />
     <ClInclude Include="..\..\include\NemuFramework\Nemu\Core\TemplatingEngine.h" />
     <ClInclude Include="..\..\include\NemuFramework\Nemu\Core\linkoptions.h" />
-    <ClInclude Include="..\..\src\Beast\BeastServer.h" />
-    <ClInclude Include="..\..\src\Beast\BeastListener.h" />
-    <ClInclude Include="..\..\src\Beast\BeastSession.h" />
-    <ClInclude Include="..\..\src\Beast\BeastRequest.h" />
-    <ClInclude Include="..\..\src\Beast\BeastResponseBuilder.h" />
     <ClInclude Include="..\..\src\ControlHandlerRegistration.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
