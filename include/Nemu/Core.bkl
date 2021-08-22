@@ -1,25 +1,24 @@
-ishikopath = envvar("ISHIKO");
-import $(ishikopath)/Errors/Include/Ishiko/Errors.bkl;
-import $(ishikopath)/ThirdPartyGlue/Include/Ishiko/G3log.bkl;
-import $(ishikopath)/ThirdPartyGlue/Include/Ishiko/Boost.bkl;
+ishikopath = envvar("ISHIKO_CPP");
+import $(ishikopath)/errors/include/Ishiko/Errors.bkl;
+import $(ishikopath)/third-party-glue/include/Ishiko/ThirdParty/Boost.bkl;
 
-setting NEMUFRAMEWORK_NEMU_ROOT
+setting NEMU_CPP_ROOT
 {
     help = "Path to the Nemu installation";
-    default = '$(NEMU)/Nemu';
+    default = '$(NEMU_CPP)/nemu/cpp';
 }
 
-template NemuCore : IshikoErrors, G3log, Boost
+template NemuCore : IshikoErrors, Boost
 {
-    includedirs += $(NEMUFRAMEWORK_NEMU_ROOT)/Include;
+    includedirs += $(NEMU_CPP_ROOT)/include;
 
     if ($(toolset) == gnu)
     {
-        libdirs += $(NEMUFRAMEWORK_NEMU_ROOT)/Lib;
+        libdirs += $(NEMU_CPP_ROOT)/lib;
     }
 
     if ($(toolset) != gnu)
     {
-        libdirs += $(NEMUFRAMEWORK_NEMU_ROOT)/Lib/$(arch);
+        libdirs += $(NEMU_CPP_ROOT)/lib/$(arch);
     }
 }
