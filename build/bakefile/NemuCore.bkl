@@ -35,6 +35,7 @@ library NemuCore : IshikoErrors, G3log, Boost
 
     headers
     {
+        ../../include/Nemu/Core.h
         ../../include/Nemu/Core/Configuration.h
         ../../include/Nemu/Core/Application.h
         ../../include/Nemu/Core/Applications.h

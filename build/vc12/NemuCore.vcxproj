@@ -168,6 +168,7 @@
     <ClCompile Include="..\..\src\ControlHandlerRegistration.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\include\Nemu\Core.h" />
     <ClInclude Include="..\..\include\Nemu\Core\Configuration.h" />
     <ClInclude Include="..\..\include\Nemu\Core\Application.h" />
     <ClInclude Include="..\..\include\Nemu\Core\Applications.h" />

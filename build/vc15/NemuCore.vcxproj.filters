@@ -17,6 +17,9 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\include\Nemu\Core.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\include\Nemu\Core\Configuration.h">
       <Filter>Header Files</Filter>
     </ClInclude>
