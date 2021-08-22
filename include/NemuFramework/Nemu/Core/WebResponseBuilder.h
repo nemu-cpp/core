@@ -20,34 +20,37 @@
     IN THE SOFTWARE.
 */
 
-#ifndef _NEMUFRAMEWORK_NEMU_BEAST_BEASTLISTENER_H_
-#define _NEMUFRAMEWORK_NEMU_BEAST_BEASTLISTENER_H_
+#ifndef _NEMUFRAMEWORK_NEMU_CORE_WEBRESPONSEBUILDER_H_
+#define _NEMUFRAMEWORK_NEMU_CORE_WEBRESPONSEBUILDER_H_
 
-#include "Ishiko/Errors/Error.h"
-#include <boost/asio/ip/tcp.hpp>
-#include <boost/asio/io_context.hpp>
+#include "Views.h"
+#include <string>
 
 namespace Nemu
 {
 
-class BeastServer;
-
-class BeastListener
+/// An interface to create the response that will be sent back to the client.
+class WebResponseBuilder
 {
 public:
-    BeastListener(BeastServer& server, boost::asio::io_context& ioContext, boost::asio::ip::tcp::endpoint endpoint,
-        Ishiko::Error& error);
+    WebResponseBuilder(const Views& views);
 
-    void run();
+    virtual void setStatus(unsigned int status) = 0;
+    virtual std::string& body() = 0;
+
+    /// Renders a page using the default templating engine.
+    /**
+        @param viewName The name of the view to render. How this name is used to find the right template depends on the
+        engine and its options.
+    */
+    void view(const std::string& viewName);
+
+    void redirect();
+
+    void state();
 
 private:
-    void accept();
-    void onAccept(boost::system::error_code ec);
-
-private:
-    BeastServer& m_server;
-    boost::asio::ip::tcp::acceptor m_acceptor;
-    boost::asio::ip::tcp::socket m_socket;
+    const Views& m_views;
 };
 
 }

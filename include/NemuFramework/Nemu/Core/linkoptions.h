@@ -20,47 +20,13 @@
     IN THE SOFTWARE.
 */
 
-#ifndef _NEMUFRAMEWORK_NEMU_BEAST_BEASTSERVER_H_
-#define _NEMUFRAMEWORK_NEMU_BEAST_BEASTSERVER_H_
+#ifndef _NEMUFRAMEWORK_NEMU_CORE_LINKOPTIONS_H_
+#define _NEMUFRAMEWORK_NEMU_CORE_LINKOPTIONS_H_
 
-#include "Server.h"
-#include "Routes.h"
-#include "Views.h"
-#include "BeastListener.h"
-#include "AccessLog.h"
-#include "Ishiko/Errors/Error.h"
-#include <boost/asio/io_context.hpp>
-#include <thread>
-#include <memory>
-
-namespace Nemu
-{
-
-class BeastServer : public Server
-{
-public:
-    BeastServer(size_t numberOfThreads, const std::string& address, unsigned int port, Routes& routes, Views& views,
-        std::shared_ptr<Observer> observer, Ishiko::Error& error);
-
-    void start() override;
-    void stop() override;
-    void join() override;
-
-    bool isRunning() const override;
-
-    const Routes& routes() const;
-    const Views& views() const;
-    AccessLog& accessLog();
-
-private:
-    Routes& m_routes;
-    Views& m_views;
-    boost::asio::io_context m_ioContext;
-    BeastListener m_listener;
-    std::vector<std::thread> m_threads;
-    AccessLog m_accessLog;
-};
-
-}
+#ifdef _DEBUG
+#pragma comment(lib, "NemuCore-d.lib")
+#else
+#pragma comment(lib, "NemuCore.lib")
+#endif
 
 #endif

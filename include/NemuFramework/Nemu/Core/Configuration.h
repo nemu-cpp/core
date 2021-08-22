@@ -20,33 +20,32 @@
     IN THE SOFTWARE.
 */
 
-#include "BeastRequest.h"
+#ifndef _NEMUFRAMEWORK_NEMU_CORE_CONFIGURATION_H_
+#define _NEMUFRAMEWORK_NEMU_CORE_CONFIGURATION_H_
+
+#include <string>
 
 namespace Nemu
 {
 
-BeastRequest::BeastRequest()
+class Configuration
 {
-}
+public:
+    Configuration(int argc, char* argv[], const std::string& defaultAddress = "0.0.0.0", unsigned short defaultPort = 80);
+    Configuration(const std::string& address, unsigned short port);
 
-BeastRequest::BeastRequest(boost::beast::http::request<boost::beast::http::string_body>&& request)
-    : m_request(request)
-{
-}
+    size_t numberOfThreads() const;
+    const std::string& address() const;
+    unsigned short port() const;
 
-std::string BeastRequest::URI() const
-{
-    return m_request.target().to_string();
-}
-
-const boost::beast::http::request<boost::beast::http::string_body>& BeastRequest::request() const
-{
-    return m_request;
-}
-
-boost::beast::http::request<boost::beast::http::string_body>& BeastRequest::request()
-{
-    return m_request;
-}
+private:
+    size_t m_numberOfThreads;
+    std::string m_address;
+    unsigned short m_port;
+};
 
 }
+
+#include "linkoptions.h"
+
+#endif

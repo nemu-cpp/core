@@ -20,28 +20,18 @@
     IN THE SOFTWARE.
 */
 
-#ifndef _NEMUFRAMEWORK_NEMU_BEAST_BEASTREQUEST_H_
-#define _NEMUFRAMEWORK_NEMU_BEAST_BEASTREQUEST_H_
+#ifndef _NEMUFRAMEWORK_NEMU_CORE_ACCESSLOG_H_
+#define _NEMUFRAMEWORK_NEMU_CORE_ACCESSLOG_H_
 
-#include "WebRequest.h"
-#include <boost/beast/http.hpp>
+#include <string>
 
 namespace Nemu
 {
 
-class BeastRequest : public WebRequest
+class AccessLog
 {
 public:
-    BeastRequest();
-    BeastRequest(boost::beast::http::request<boost::beast::http::string_body>&& request);
-
-    std::string URI() const override;
-
-    const boost::beast::http::request<boost::beast::http::string_body>& request() const;
-    boost::beast::http::request<boost::beast::http::string_body>& request();
-
-private:
-    boost::beast::http::request<boost::beast::http::string_body> m_request;
+    virtual void log(const std::string& address, const std::string& requestLine, unsigned int statusCode, size_t size);
 };
 
 }

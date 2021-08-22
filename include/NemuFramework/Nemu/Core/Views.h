@@ -20,43 +20,26 @@
     IN THE SOFTWARE.
 */
 
-#ifndef _NEMUFRAMEWORK_NEMU_BEAST_BEASTSESSION_H_
-#define _NEMUFRAMEWORK_NEMU_BEAST_BEASTSESSION_H_
+#ifndef _NEMUFRAMEWORK_NEMU_CORE_VIEWS_H_
+#define _NEMUFRAMEWORK_NEMU_CORE_VIEWS_H_
 
-#include "BeastRequest.h"
-#include "BeastResponseBuilder.h"
-#include <boost/beast/core.hpp>
-#include <boost/beast/http.hpp>
-#include <boost/asio/ip/tcp.hpp>
-#include <boost/asio/strand.hpp>
+#include "TemplatingEngine.h"
 #include <memory>
 
 namespace Nemu
 {
 
-class BeastServer;
-
-class BeastSession : public std::enable_shared_from_this<BeastSession>
+/// A list of templating engines and their associated settings.
+class Views
 {
 public:
-    BeastSession(BeastServer& server, boost::asio::ip::tcp::socket&& socket);
-    void run();
+    Views();
+    Views(std::shared_ptr<TemplatingEngine> engine);
+
+    const TemplatingEngine& engine() const;
 
 private:
-    void handleRequest(BeastRequest&& request);
-
-    void read();
-    void onRead(boost::system::error_code ec, size_t bytesTransferred);
-    void onWrite(boost::system::error_code ec, size_t bytesTransferred, bool closed);
-    void close();
-
-private:
-    BeastServer& m_server;
-    boost::asio::ip::tcp::socket m_socket;
-    //boost::asio::strand<boost::asio::io_context::executor_type> m_strand;
-    boost::beast::flat_buffer m_buffer;
-    BeastRequest m_request;
-    BeastResponseBuilder m_response;
+    std::shared_ptr<TemplatingEngine> m_engine;
 };
 
 }
