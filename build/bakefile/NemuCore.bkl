@@ -15,7 +15,7 @@ library NemuCore : IshikoErrors, G3log, Boost
 {
     archs = x86 x86_64;
    
-    includedirs += ../../include/NemuFramework/Nemu/Core;
+    includedirs += ../../include/Nemu/Core;
 
     if ($(toolset) == gnu)
     {
@@ -35,22 +35,22 @@ library NemuCore : IshikoErrors, G3log, Boost
 
     headers
     {
-        ../../include/NemuFramework/Nemu/Core/Configuration.h
-        ../../include/NemuFramework/Nemu/Core/Application.h
-        ../../include/NemuFramework/Nemu/Core/Applications.h
-        ../../include/NemuFramework/Nemu/Core/ErrorCategory.h
-        ../../include/NemuFramework/Nemu/Core/Server.h
-        ../../include/NemuFramework/Nemu/Core/Servers.h
-        ../../include/NemuFramework/Nemu/Core/Log.h
-        ../../include/NemuFramework/Nemu/Core/WebApplication.h
-        ../../include/NemuFramework/Nemu/Core/Route.h
-        ../../include/NemuFramework/Nemu/Core/Routes.h
-        ../../include/NemuFramework/Nemu/Core/WebRequest.h
-        ../../include/NemuFramework/Nemu/Core/WebResponseBuilder.h
-        ../../include/NemuFramework/Nemu/Core/AccessLog.h
-        ../../include/NemuFramework/Nemu/Core/Views.h
-        ../../include/NemuFramework/Nemu/Core/TemplatingEngine.h
-        ../../include/NemuFramework/Nemu/Core/linkoptions.h
+        ../../include/Nemu/Core/Configuration.h
+        ../../include/Nemu/Core/Application.h
+        ../../include/Nemu/Core/Applications.h
+        ../../include/Nemu/Core/ErrorCategory.h
+        ../../include/Nemu/Core/Server.h
+        ../../include/Nemu/Core/Servers.h
+        ../../include/Nemu/Core/Log.h
+        ../../include/Nemu/Core/WebApplication.h
+        ../../include/Nemu/Core/Route.h
+        ../../include/Nemu/Core/Routes.h
+        ../../include/Nemu/Core/WebRequest.h
+        ../../include/Nemu/Core/WebResponseBuilder.h
+        ../../include/Nemu/Core/AccessLog.h
+        ../../include/Nemu/Core/Views.h
+        ../../include/Nemu/Core/TemplatingEngine.h
+        ../../include/Nemu/Core/linkoptions.h
 
         ../../src/ControlHandlerRegistration.h
     }
