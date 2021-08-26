@@ -1,48 +1,48 @@
-nemupath = envvar("NEMU");
-import $(nemupath)/Nemu/Include/NemuFramework/Nemu/Core.bkl;
-ishikopath = envvar("ISHIKO");
-import $(ishikopath)/HTTP/Include/Ishiko/HTTP.bkl;
-import $(ishikopath)/TestFramework/Include/Ishiko/TestFramework/TestFrameworkCore.bkl;
+ishikopath = envvar("ISHIKO_CPP");
+import $(ishikopath)/tests/include/Ishiko/Tests.bkl;
+nemupath = envvar("NEMU_CPP");
+import $(nemupath)/core/include/Nemu/Core.bkl;
 
-toolsets = gnu vs2017 vs2015 vs2013;
+toolsets = gnu vs2019 vs2017 vs2015 vs2013;
 
-gnu.makefile = ../GNUmakefile/GNUmakefile;
-vs2017.solutionfile = ../VC15/NemuCoreTests.sln;
-vs2015.solutionfile = ../VC14/NemuCoreTests.sln;
-vs2013.solutionfile = ../VC12/NemuCoreTests.sln;
+gnu.makefile = ../gnumake/GNUmakefile;
+vs2019.solutionfile = ../vc16/NemuCoreTests.sln;
+vs2017.solutionfile = ../vc15/NemuCoreTests.sln;
+vs2015.solutionfile = ../vc14/NemuCoreTests.sln;
+vs2013.solutionfile = ../vc12/NemuCoreTests.sln;
 
-program NemuCoreTests : NemuCore, IshikoHTTP, IshikoTestFrameworkCore
+program NemuCoreTests : NemuCore, IshikoTests
 {
     archs = x86 x86_64;
 
-    includedirs += ../../../../Include/NemuFramework/Nemu/Core ../../../../Core/Source;
+    includedirs += ../../../../include/Nemu/Core;
 
     headers
     {
-        ../../Source/ConfigurationTests.h
-        ../../Source/RouteTests.h
-        ../../Source/RoutesTests.h
+        ../../src/ConfigurationTests.h
+        ../../src/RouteTests.h
+        ../../src/RoutesTests.h
 
-        ../../Source/BeastTests/BeastTestSequence.h
-        ../../Source/BeastTests/BeastResponseBuilderTests.h
-        ../../Source/BeastTests/BeastServerTests.h
+        ../../src/BeastTests/BeastTestSequence.h
+        ../../src/BeastTests/BeastResponseBuilderTests.h
+        ../../src/BeastTests/BeastServerTests.h
 
-        ../../Source/Helpers/TestServerObserver.h
-        ../../Source/Helpers/TestRoutes.h
+        ../../src/Helpers/TestServerObserver.h
+        ../../src/Helpers/TestRoutes.h
     }
 
     sources
     {
-        ../../Source/main.cpp
-        ../../Source/ConfigurationTests.cpp
-        ../../Source/RouteTests.cpp
-        ../../Source/RoutesTests.cpp
+        ../../src/main.cpp
+        ../../src/ConfigurationTests.cpp
+        ../../src/RouteTests.cpp
+        ../../src/RoutesTests.cpp
 
-        ../../Source/BeastTests/BeastTestSequence.cpp
-        ../../Source/BeastTests/BeastResponseBuilderTests.cpp
-        ../../Source/BeastTests/BeastServerTests.cpp
+        ../../src/BeastTests/BeastTestSequence.cpp
+        ../../src/BeastTests/BeastResponseBuilderTests.cpp
+        ../../src/BeastTests/BeastServerTests.cpp
 
-        ../../Source/Helpers/TestServerObserver.cpp
-        ../../Source/Helpers/TestRoutes.cpp
+        ../../src/Helpers/TestServerObserver.cpp
+        ../../src/Helpers/TestRoutes.cpp
     }
 }
