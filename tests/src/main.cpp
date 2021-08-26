@@ -1,5 +1,5 @@
 /*
-    Copyright (c) 2019 Xavier Leclercq
+    Copyright (c) 2019-2021 Xavier Leclercq
 
     Permission is hereby granted, free of charge, to any person obtaining a
     copy of this software and associated documentation files (the "Software"),
@@ -24,7 +24,7 @@
 #include "RouteTests.h"
 #include "RoutesTests.h"
 #include "BeastTests/BeastTestSequence.h"
-#include "Ishiko/TestFramework/TestFrameworkCore.h"
+#include <Ishiko/Tests.h>
 #include <boost/filesystem/operations.hpp>
 
 using namespace Ishiko::Tests;

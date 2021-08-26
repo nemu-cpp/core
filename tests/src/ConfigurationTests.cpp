@@ -1,5 +1,5 @@
 /*
-    Copyright (c) 2019 Xavier Leclercq
+    Copyright (c) 2019-2021 Xavier Leclercq
 
     Permission is hereby granted, free of charge, to any person obtaining a
     copy of this software and associated documentation files (the "Software"),
@@ -21,7 +21,7 @@
 */
 
 #include "ConfigurationTests.h"
-#include "NemuFramework/Nemu/Core/Configuration.h"
+#include "Nemu/Core/Configuration.h"
 
 using namespace Ishiko::Tests;
 
@@ -39,9 +39,9 @@ void ConfigurationTests::CreationTest1(Test& test)
     char* argv[] = { "NemuTests" };
     Nemu::Configuration configuration(argc, argv);
 
-    ISHTF_FAIL_UNLESS(configuration.address() == "0.0.0.0");
-    ISHTF_FAIL_UNLESS(configuration.port() == 80);
-    ISHTF_PASS();
+    ISHIKO_FAIL_IF_NEQ(configuration.address(), "0.0.0.0");
+    ISHIKO_FAIL_IF_NEQ(configuration.port(), 80);
+    ISHIKO_PASS();
 }
 
 void ConfigurationTests::CreationTest2(Test& test)
@@ -50,16 +50,16 @@ void ConfigurationTests::CreationTest2(Test& test)
     char* argv[] = { "NemuTests" };
     Nemu::Configuration configuration(argc, argv, "127.0.0.1", 8080);
 
-    ISHTF_FAIL_UNLESS(configuration.address() == "127.0.0.1");
-    ISHTF_FAIL_UNLESS(configuration.port() == 8080);
-    ISHTF_PASS();
+    ISHIKO_FAIL_IF_NEQ(configuration.address(), "127.0.0.1");
+    ISHIKO_FAIL_IF_NEQ(configuration.port(), 8080);
+    ISHIKO_PASS();
 }
 
 void ConfigurationTests::CreationTest3(Test& test)
 {
     Nemu::Configuration configuration("0.0.0.0", 80);
 
-    ISHTF_FAIL_UNLESS(configuration.address() == "0.0.0.0");
-    ISHTF_FAIL_UNLESS(configuration.port() == 80);
-    ISHTF_PASS();
+    ISHIKO_FAIL_IF_NEQ(configuration.address(), "0.0.0.0");
+    ISHIKO_FAIL_IF_NEQ(configuration.port(), 80);
+    ISHIKO_PASS();
 }
