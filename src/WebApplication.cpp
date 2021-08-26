@@ -1,5 +1,5 @@
 /*
-    Copyright (c) 2019 Xavier Leclercq
+    Copyright (c) 2019-2021 Xavier Leclercq
 
     Permission is hereby granted, free of charge, to any person obtaining a
     copy of this software and associated documentation files (the "Software"),
@@ -21,7 +21,6 @@
 */
 
 #include "WebApplication.h"
-#include "Beast/BeastServer.h"
 
 namespace Nemu
 {
@@ -29,16 +28,18 @@ namespace Nemu
 WebApplication::WebApplication(const Configuration& configuration, std::shared_ptr<Observer> observer, Ishiko::Error& error)
     : Application(observer), m_routes(std::make_shared<Routes>())
 {
-    servers().append(std::make_shared<BeastServer>(configuration.numberOfThreads(), configuration.address(),
-        configuration.port(), *m_routes, m_views, observer, error));
+    // TODO: construct server entirely outside of WebApplication to give maximu flexibility
+    //servers().append(std::make_shared<BeastServer>(configuration.numberOfThreads(), configuration.address(),
+    //    configuration.port(), *m_routes, m_views, observer, error));
 }
 
 WebApplication::WebApplication(const Configuration& configuration, std::shared_ptr<Routes> routes,
     std::shared_ptr<Observer> observer, Ishiko::Error& error)
     : Application(observer), m_routes(routes)
 {
-    servers().append(std::make_shared<BeastServer>(configuration.numberOfThreads(), configuration.address(),
-        configuration.port(), *m_routes, m_views, observer, error));
+    // TODO: construct server entirely outside of WebApplication to give maximu flexibility
+    //servers().append(std::make_shared<BeastServer>(configuration.numberOfThreads(), configuration.address(),
+    //    configuration.port(), *m_routes, m_views, observer, error));
 }
 
 Routes& WebApplication::routes()
