@@ -1,0 +1,24 @@
+ishikopath = envvar("ISHIKO_CPP");
+import $(ishikopath)/errors/include/Ishiko/Errors.bkl;
+import $(ishikopath)/third-party-glue/include/Ishiko/ThirdParty/Boost.bkl;
+
+setting NEMU_CPP_CORE_ROOT
+{
+    help = "Path to the Nemu installation";
+    default = '$(NEMU_CPP)/core';
+}
+
+template NemuCore : IshikoErrors, Boost
+{
+    includedirs += $(NEMU_CPP_CORE_ROOT)/include;
+
+    if ($(toolset) == gnu)
+    {
+        libdirs += $(NEMU_CPP_CORE_ROOT)/lib;
+    }
+
+    if ($(toolset) != gnu)
+    {
+        libdirs += $(NEMU_CPP_CORE_ROOT)/lib/$(arch);
+    }
+}
