@@ -23,7 +23,6 @@
 #include "ConfigurationTests.h"
 #include "RouteTests.h"
 #include "RoutesTests.h"
-#include "BeastTests/BeastTestSequence.h"
 #include <Ishiko/Tests.h>
 #include <boost/filesystem/operations.hpp>
 
@@ -41,7 +40,6 @@ int main(int argc, char* argv[])
     theTests.append<ConfigurationTests>();
     theTests.append<RouteTests>();
     theTests.append<RoutesTests>();
-    theTests.append<BeastTestSequence>();
 
     return theTestHarness.run();
 }
