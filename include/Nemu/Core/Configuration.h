@@ -1,5 +1,5 @@
 /*
-    Copyright (c) 2019 Xavier Leclercq
+    Copyright (c) 2019-2021 Xavier Leclercq
 
     Permission is hereby granted, free of charge, to any person obtaining a
     copy of this software and associated documentation files (the "Software"),
@@ -31,7 +31,7 @@ namespace Nemu
 class Configuration
 {
 public:
-    Configuration(int argc, char* argv[], const std::string& defaultAddress = "0.0.0.0", unsigned short defaultPort = 80);
+    Configuration(int argc, const char* argv[], const std::string& defaultAddress = "0.0.0.0", unsigned short defaultPort = 80);
     Configuration(const std::string& address, unsigned short port);
 
     size_t numberOfThreads() const;

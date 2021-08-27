@@ -36,7 +36,7 @@ ConfigurationTests::ConfigurationTests(const TestNumber& number, const TestEnvir
 void ConfigurationTests::CreationTest1(Test& test)
 {
     int argc = 1;
-    char* argv[] = { "NemuTests" };
+    const char* argv[] = { "NemuTests" };
     Nemu::Configuration configuration(argc, argv);
 
     ISHIKO_FAIL_IF_NEQ(configuration.address(), "0.0.0.0");
@@ -47,7 +47,7 @@ void ConfigurationTests::CreationTest1(Test& test)
 void ConfigurationTests::CreationTest2(Test& test)
 {
     int argc = 1;
-    char* argv[] = { "NemuTests" };
+    const char* argv[] = { "NemuTests" };
     Nemu::Configuration configuration(argc, argv, "127.0.0.1", 8080);
 
     ISHIKO_FAIL_IF_NEQ(configuration.address(), "127.0.0.1");
