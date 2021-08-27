@@ -1,5 +1,5 @@
 /*
-    Copyright (c) 2019 Xavier Leclercq
+    Copyright (c) 2019-2021 Xavier Leclercq
 
     Permission is hereby granted, free of charge, to any person obtaining a
     copy of this software and associated documentation files (the "Software"),
@@ -28,7 +28,7 @@
 namespace Nemu
 {
 
-Configuration::Configuration(int argc, char* argv[], const std::string& defaultAddress, unsigned short defaultPort)
+Configuration::Configuration(int argc, const char* argv[], const std::string& defaultAddress, unsigned short defaultPort)
 {
     boost::program_options::options_description description("Command line arguments");
     description.add_options()

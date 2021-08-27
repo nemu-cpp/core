@@ -7,7 +7,7 @@
 #ifndef _NEMU_CPP_CORE_ERRORCATEGORY_H_
 #define _NEMU_CPP_CORE_ERRORCATEGORY_H_
 
-#include <Ishiko/Errors.h>
+#include <Ishiko/Errors.hpp>
 
 namespace Nemu
 {

@@ -15,17 +15,17 @@ program NemuCoreTests : NemuCore, IshikoTests
 {
     archs = x86 x86_64;
 
-    includedirs += ../../../../include/Nemu/Core;
+    if ($(toolset) == gnu)
+    {
+        cxx-compiler-options = "-std=c++11";
+        libs += NemuCore IshikoTests IshikoProcess boost_program_options boost_filesystem ;
+    }
 
     headers
     {
         ../../src/ConfigurationTests.h
         ../../src/RouteTests.h
         ../../src/RoutesTests.h
-
-        ../../src/BeastTests/BeastTestSequence.h
-        ../../src/BeastTests/BeastResponseBuilderTests.h
-        ../../src/BeastTests/BeastServerTests.h
 
         ../../src/Helpers/TestServerObserver.h
         ../../src/Helpers/TestRoutes.h
@@ -37,10 +37,6 @@ program NemuCoreTests : NemuCore, IshikoTests
         ../../src/ConfigurationTests.cpp
         ../../src/RouteTests.cpp
         ../../src/RoutesTests.cpp
-
-        ../../src/BeastTests/BeastTestSequence.cpp
-        ../../src/BeastTests/BeastResponseBuilderTests.cpp
-        ../../src/BeastTests/BeastServerTests.cpp
 
         ../../src/Helpers/TestServerObserver.cpp
         ../../src/Helpers/TestRoutes.cpp

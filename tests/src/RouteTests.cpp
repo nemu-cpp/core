@@ -1,5 +1,5 @@
 /*
-    Copyright (c) 2019 Xavier Leclercq
+    Copyright (c) 2019-2021 Xavier Leclercq
 
     Permission is hereby granted, free of charge, to any person obtaining a
     copy of this software and associated documentation files (the "Software"),
@@ -21,7 +21,7 @@
 */
 
 #include "RouteTests.h"
-#include "NemuFramework/Nemu/Core/Route.h"
+#include "Nemu/Core/Route.h"
 
 using namespace Ishiko::Tests;
 
@@ -37,5 +37,6 @@ void RouteTests::CreationTest1(Test& test)
         [](const Nemu::WebRequest& request, Nemu::WebResponseBuilder& response, void* handlerData)
         {
         });
-    ISHTF_PASS();
+
+    ISHIKO_PASS();
 }
