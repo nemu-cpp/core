@@ -18,7 +18,7 @@ library NemuCore : IshikoErrors, Boost
 
     if ($(toolset) == gnu)
     {
-        cxx-compiler-options = "-std=c++17";
+        cxx-compiler-options = "-std=c++11";
         outputdir = ../../lib;
     }
 
