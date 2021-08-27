@@ -86,7 +86,7 @@
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <MinimalRebuild>false</MinimalRebuild>
-      <AdditionalIncludeDirectories>$(ISHIKO_CPP)/errors\include;$(ISHIKO_CPP_THIRD_PARTY_BOOST);$(NEMU_CPP)/core\include;$(ISHIKO_CPP)/base-platform\include;$(ISHIKO_CPP)/filesystem\include;$(ISHIKO_CPP)/text\include;$(ISHIKO_CPP)/types\include;$(ISHIKO_CPP)/diff\include;$(ISHIKO_CPP)/process\include;$(ISHIKO_CPP)/tests\include;..\..\..\..\include\Nemu\Core;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ISHIKO_CPP)/errors\include;$(ISHIKO_CPP_THIRD_PARTY_BOOST);$(NEMU_CPP)/core\include;$(ISHIKO_CPP)/base-platform\include;$(ISHIKO_CPP)/filesystem\include;$(ISHIKO_CPP)/text\include;$(ISHIKO_CPP)/types\include;$(ISHIKO_CPP)/diff\include;$(ISHIKO_CPP)/process\include;$(ISHIKO_CPP)/tests\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
@@ -102,7 +102,7 @@
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <MinimalRebuild>false</MinimalRebuild>
-      <AdditionalIncludeDirectories>$(ISHIKO_CPP)/errors\include;$(ISHIKO_CPP_THIRD_PARTY_BOOST);$(NEMU_CPP)/core\include;$(ISHIKO_CPP)/base-platform\include;$(ISHIKO_CPP)/filesystem\include;$(ISHIKO_CPP)/text\include;$(ISHIKO_CPP)/types\include;$(ISHIKO_CPP)/diff\include;$(ISHIKO_CPP)/process\include;$(ISHIKO_CPP)/tests\include;..\..\..\..\include\Nemu\Core;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ISHIKO_CPP)/errors\include;$(ISHIKO_CPP_THIRD_PARTY_BOOST);$(NEMU_CPP)/core\include;$(ISHIKO_CPP)/base-platform\include;$(ISHIKO_CPP)/filesystem\include;$(ISHIKO_CPP)/text\include;$(ISHIKO_CPP)/types\include;$(ISHIKO_CPP)/diff\include;$(ISHIKO_CPP)/process\include;$(ISHIKO_CPP)/tests\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
@@ -120,7 +120,7 @@
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <MinimalRebuild>false</MinimalRebuild>
-      <AdditionalIncludeDirectories>$(ISHIKO_CPP)/errors\include;$(ISHIKO_CPP_THIRD_PARTY_BOOST);$(NEMU_CPP)/core\include;$(ISHIKO_CPP)/base-platform\include;$(ISHIKO_CPP)/filesystem\include;$(ISHIKO_CPP)/text\include;$(ISHIKO_CPP)/types\include;$(ISHIKO_CPP)/diff\include;$(ISHIKO_CPP)/process\include;$(ISHIKO_CPP)/tests\include;..\..\..\..\include\Nemu\Core;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ISHIKO_CPP)/errors\include;$(ISHIKO_CPP_THIRD_PARTY_BOOST);$(NEMU_CPP)/core\include;$(ISHIKO_CPP)/base-platform\include;$(ISHIKO_CPP)/filesystem\include;$(ISHIKO_CPP)/text\include;$(ISHIKO_CPP)/types\include;$(ISHIKO_CPP)/diff\include;$(ISHIKO_CPP)/process\include;$(ISHIKO_CPP)/tests\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
@@ -140,7 +140,7 @@
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <MinimalRebuild>false</MinimalRebuild>
-      <AdditionalIncludeDirectories>$(ISHIKO_CPP)/errors\include;$(ISHIKO_CPP_THIRD_PARTY_BOOST);$(NEMU_CPP)/core\include;$(ISHIKO_CPP)/base-platform\include;$(ISHIKO_CPP)/filesystem\include;$(ISHIKO_CPP)/text\include;$(ISHIKO_CPP)/types\include;$(ISHIKO_CPP)/diff\include;$(ISHIKO_CPP)/process\include;$(ISHIKO_CPP)/tests\include;..\..\..\..\include\Nemu\Core;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ISHIKO_CPP)/errors\include;$(ISHIKO_CPP_THIRD_PARTY_BOOST);$(NEMU_CPP)/core\include;$(ISHIKO_CPP)/base-platform\include;$(ISHIKO_CPP)/filesystem\include;$(ISHIKO_CPP)/text\include;$(ISHIKO_CPP)/types\include;$(ISHIKO_CPP)/diff\include;$(ISHIKO_CPP)/process\include;$(ISHIKO_CPP)/tests\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
@@ -156,9 +156,6 @@
     <ClCompile Include="..\..\src\ConfigurationTests.cpp" />
     <ClCompile Include="..\..\src\RouteTests.cpp" />
     <ClCompile Include="..\..\src\RoutesTests.cpp" />
-    <ClCompile Include="..\..\src\BeastTests\BeastTestSequence.cpp" />
-    <ClCompile Include="..\..\src\BeastTests\BeastResponseBuilderTests.cpp" />
-    <ClCompile Include="..\..\src\BeastTests\BeastServerTests.cpp" />
     <ClCompile Include="..\..\src\Helpers\TestServerObserver.cpp" />
     <ClCompile Include="..\..\src\Helpers\TestRoutes.cpp" />
   </ItemGroup>
@@ -166,9 +163,6 @@
     <ClInclude Include="..\..\src\ConfigurationTests.h" />
     <ClInclude Include="..\..\src\RouteTests.h" />
     <ClInclude Include="..\..\src\RoutesTests.h" />
-    <ClInclude Include="..\..\src\BeastTests\BeastTestSequence.h" />
-    <ClInclude Include="..\..\src\BeastTests\BeastResponseBuilderTests.h" />
-    <ClInclude Include="..\..\src\BeastTests\BeastServerTests.h" />
     <ClInclude Include="..\..\src\Helpers\TestServerObserver.h" />
     <ClInclude Include="..\..\src\Helpers\TestRoutes.h" />
   </ItemGroup>

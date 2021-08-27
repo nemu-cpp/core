@@ -1,5 +1,5 @@
 /*
-    Copyright (c) 2019 Xavier Leclercq
+    Copyright (c) 2019-2021 Xavier Leclercq
 
     Permission is hereby granted, free of charge, to any person obtaining a
     copy of this software and associated documentation files (the "Software"),
@@ -21,7 +21,7 @@
 */
 
 #include "RoutesTests.h"
-#include "NemuFramework/Nemu/Core/Routes.h"
+#include "Nemu/Core/Routes.h"
 
 using namespace Ishiko::Tests;
 
@@ -35,7 +35,8 @@ RoutesTests::RoutesTests(const TestNumber& number, const TestEnvironment& enviro
 void RoutesTests::CreationTest1(Test& test)
 {
     Nemu::Routes routes;
-    ISHTF_PASS();
+
+    ISHIKO_PASS();
 }
 
 void RoutesTests::MatchTest1(Test& test)
@@ -43,6 +44,6 @@ void RoutesTests::MatchTest1(Test& test)
     Nemu::Routes routes;
     const Nemu::Route& matchedRoute = routes.match("/");
 
-    ISHTF_FAIL_UNLESS(&matchedRoute == &routes.defaultRoute());
-    ISHTF_PASS();
+    ISHIKO_FAIL_IF_NEQ(&matchedRoute, &routes.defaultRoute());
+    ISHIKO_PASS();
 }

@@ -1,5 +1,5 @@
 /*
-    Copyright (c) 2019 Xavier Leclercq
+    Copyright (c) 2019-2021 Xavier Leclercq
 
     Permission is hereby granted, free of charge, to any person obtaining a
     copy of this software and associated documentation files (the "Software"),
@@ -23,7 +23,7 @@
 #ifndef _NEMUFRAMEWORK_NEMU_TESTS_HELPERS_TESTSERVEROBSERVER_H_
 #define _NEMUFRAMEWORK_NEMU_TESTS_HELPERS_TESTSERVEROBSERVER_H_
 
-#include "NemuFramework/Nemu/Core/Server.h"
+#include "Nemu/Core/Server.h"
 #include <mutex>
 #include <vector>
 #include <tuple>
