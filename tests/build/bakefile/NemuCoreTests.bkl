@@ -15,7 +15,11 @@ program NemuCoreTests : NemuCore, IshikoTests
 {
     archs = x86 x86_64;
 
-    includedirs += ../../../../include/Nemu/Core;
+    if ($(toolset) == gnu)
+    {
+        cxx-compiler-options = "-std=c++11";
+        libs += NemuCore;
+    }
 
     headers
     {
