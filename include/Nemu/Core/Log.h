@@ -24,8 +24,7 @@
 #define _NEMUFRAMEWORK_NEMU_CORE_LOG_H_
 
 #include "Application.h"
-#include <g3log/g3log.hpp>
-#include <g3log/logworker.hpp>
+#include <Ishiko/Logging.h>
 #include <string>
 
 namespace Nemu
