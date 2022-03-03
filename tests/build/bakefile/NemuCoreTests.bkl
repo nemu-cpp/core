@@ -26,9 +26,6 @@ program NemuCoreTests : NemuCore, IshikoTests
         ../../src/ConfigurationTests.h
         ../../src/RouteTests.h
         ../../src/RoutesTests.h
-
-        ../../src/Helpers/TestServerObserver.h
-        ../../src/Helpers/TestRoutes.h
     }
 
     sources
@@ -37,8 +34,5 @@ program NemuCoreTests : NemuCore, IshikoTests
         ../../src/ConfigurationTests.cpp
         ../../src/RouteTests.cpp
         ../../src/RoutesTests.cpp
-
-        ../../src/Helpers/TestServerObserver.cpp
-        ../../src/Helpers/TestRoutes.cpp
     }
 }
