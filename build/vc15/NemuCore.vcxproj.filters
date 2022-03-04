@@ -17,7 +17,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\include\Nemu\Core.h">
+    <ClInclude Include="..\..\include\Nemu\Core.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\include\Nemu\Core\Configuration.h">
@@ -32,19 +32,22 @@
     <ClInclude Include="..\..\include\Nemu\Core\ErrorCategory.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\include\Nemu\Core\Server.h">
+    <ClInclude Include="..\..\include\Nemu\Core\Server.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\include\Nemu\Core\Servers.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\include\Nemu\Core\Log.h">
+    <ClInclude Include="..\..\include\Nemu\Core\linkoptions.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Nemu\Core\Logger.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\include\Nemu\Core\LoggingMacros.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\include\Nemu\Core\WebApplication.h">
+    <ClInclude Include="..\..\include\Nemu\Core\WebApplication.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\include\Nemu\Core\Route.h">
@@ -66,9 +69,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\include\Nemu\Core\TemplatingEngine.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\include\Nemu\Core\linkoptions.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\ControlHandlerRegistration.h">
@@ -94,7 +94,7 @@
     <ClCompile Include="..\..\src\Servers.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\Log.cpp">
+    <ClCompile Include="..\..\src\Logger.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\src\WebApplication.cpp">

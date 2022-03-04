@@ -96,8 +96,8 @@ void Application::Observers::removeDeletedObservers()
     m_observers.erase(it, m_observers.end());
 }
 
-Application::Application(Log& log, std::shared_ptr<Observer> observer)
-    : m_log(log)
+Application::Application(Logger& logger, std::shared_ptr<Observer> observer)
+    : m_logger(logger)
 {
     m_observers.add(observer);
     Applications::set(this);
@@ -110,7 +110,8 @@ Application::~Application()
 
 void Application::start()
 {
-    Log& logger = m_log;
+    // The "logger" alias is what is used by the MENU_LOG_lvl macros
+    Logger& logger = m_logger;
 
     NEMU_LOG_INFO("Application starting");
     
@@ -140,7 +141,8 @@ void Application::start()
 
 void Application::stop()
 {
-    Log& logger = m_log;
+    // The "logger" alias is what is used by the MENU_LOG_lvl macros
+    Logger& logger = m_logger;
 
     NEMU_LOG_INFO("Application stopping");
 
