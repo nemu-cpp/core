@@ -176,6 +176,7 @@
     <ClInclude Include="..\..\include\Nemu\Core\Server.h" />
     <ClInclude Include="..\..\include\Nemu\Core\Servers.h" />
     <ClInclude Include="..\..\include\Nemu\Core\Log.h" />
+    <ClInclude Include="..\..\include\Nemu\Core\LoggingMacros.hpp" />
     <ClInclude Include="..\..\include\Nemu\Core\WebApplication.h" />
     <ClInclude Include="..\..\include\Nemu\Core\Route.h" />
     <ClInclude Include="..\..\include\Nemu\Core\Routes.h" />
