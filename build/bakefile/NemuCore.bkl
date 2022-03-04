@@ -1,7 +1,7 @@
 ishikopath = envvar("ISHIKO_CPP");
 import $(ishikopath)/errors/include/Ishiko/Errors.bkl;
+import $(ishikopath)/logging/include/Ishiko/Logging.bkl;
 import $(ishikopath)/third-party-glue/include/Ishiko/ThirdParty/Boost.bkl;
-import $(ishikopath)/third-party-glue/include/Ishiko/ThirdParty/G3log.bkl;
 
 toolsets = gnu vs2019 vs2017 vs2015 vs2013;
 
@@ -11,7 +11,7 @@ vs2017.solutionfile = ../vc15/NemuCore.sln;
 vs2015.solutionfile = ../vc14/NemuCore.sln;
 vs2013.solutionfile = ../vc12/NemuCore.sln;
 
-library NemuCore : IshikoErrors, G3log, Boost
+library NemuCore : IshikoLogging, IshikoErrors, Boost
 {
     archs = x86 x86_64;
    
@@ -19,7 +19,7 @@ library NemuCore : IshikoErrors, G3log, Boost
 
     if ($(toolset) == gnu)
     {
-        cxx-compiler-options = "-std=c++17";
+        cxx-compiler-options = "-std=c++11";
         outputdir = ../../lib;
     }
 
