@@ -43,6 +43,7 @@ library NemuCore : IshikoLogging, IshikoErrors, Boost
         ../../include/Nemu/Core/Server.h
         ../../include/Nemu/Core/Servers.h
         ../../include/Nemu/Core/Log.h
+        ../../include/Nemu/Core/LoggingMacros.hpp
         ../../include/Nemu/Core/WebApplication.h
         ../../include/Nemu/Core/Route.h
         ../../include/Nemu/Core/Routes.h

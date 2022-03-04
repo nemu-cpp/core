@@ -8,6 +8,7 @@
 #include "Nemu/Core/Route.h"
 
 using namespace Ishiko::Tests;
+using namespace Nemu;
 
 RouteTests::RouteTests(const TestNumber& number, const TestContext& context)
     : TestSequence(number, "Route tests", context)
@@ -17,8 +18,8 @@ RouteTests::RouteTests(const TestNumber& number, const TestContext& context)
 
 void RouteTests::CreationTest1(Test& test)
 {
-    Nemu::Route route("/",
-        [](const Nemu::WebRequest& request, Nemu::WebResponseBuilder& response, void* handlerData)
+    Route route("/",
+        [](const WebRequest& request, WebResponseBuilder& response, void* handlerData, Log& log)
         {
         });
 

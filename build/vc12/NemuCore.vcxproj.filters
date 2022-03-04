@@ -41,6 +41,9 @@
     <ClInclude Include="..\..\include\Nemu\Core\Log.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\include\Nemu\Core\LoggingMacros.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\include\Nemu\Core\WebApplication.h">
       <Filter>Header Files</Filter>
     </ClInclude>
