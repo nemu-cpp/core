@@ -7,6 +7,7 @@
 #include "ConfigurationTests.h"
 #include "RouteTests.h"
 #include "RoutesTests.h"
+#include "Nemu/Core/linkoptions.hpp"
 #include <Ishiko/Tests.hpp>
 #include <boost/filesystem/operations.hpp>
 

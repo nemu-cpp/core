@@ -1,11 +1,11 @@
 /*
-    Copyright (c) 2019 Xavier Leclercq
+    Copyright (c) 2019-2022 Xavier Leclercq
     Released under the MIT License
     See https://github.com/nemu-cpp/core/blob/main/LICENSE.txt
 */
 
-#ifndef _NEMUFRAMEWORK_NEMU_CORE_ACCESSLOG_H_
-#define _NEMUFRAMEWORK_NEMU_CORE_ACCESSLOG_H_
+#ifndef _NEMU_CPP_CORE_ACCESSLOG_H_
+#define _NEMU_CPP_CORE_ACCESSLOG_H_
 
 #include <string>
 
