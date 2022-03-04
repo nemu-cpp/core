@@ -1,23 +1,7 @@
 /*
-    Copyright (c) 2019 Xavier Leclercq
-
-    Permission is hereby granted, free of charge, to any person obtaining a
-    copy of this software and associated documentation files (the "Software"),
-    to deal in the Software without restriction, including without limitation
-    the rights to use, copy, modify, merge, publish, distribute, sublicense,
-    and/or sell copies of the Software, and to permit persons to whom the
-    Software is furnished to do so, subject to the following conditions:
-
-    The above copyright notice and this permission notice shall be included in
-    all copies or substantial portions of the Software.
-
-    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
-    THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-    FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-    IN THE SOFTWARE.
+    Copyright (c) 2022 Xavier Leclercq
+    Released under the MIT License
+    See https://github.com/nemu-cpp/core/blob/main/LICENSE.txt
 */
 
 #include "Application.h"
@@ -25,7 +9,10 @@
 #ifdef _WIN32
 #include "ControlHandlerRegistration.h"
 #endif
+#include "LoggingMacros.hpp"
 #include <algorithm>
+
+using namespace Ishiko;
 
 namespace Nemu
 {
@@ -109,7 +96,8 @@ void Application::Observers::removeDeletedObservers()
     m_observers.erase(it, m_observers.end());
 }
 
-Application::Application(std::shared_ptr<Observer> observer)
+Application::Application(Log& log, std::shared_ptr<Observer> observer)
+    : m_log(log)
 {
     m_observers.add(observer);
     Applications::set(this);
@@ -122,6 +110,10 @@ Application::~Application()
 
 void Application::start()
 {
+    Log& logger = m_log;
+
+    NEMU_LOG_INFO("Application starting");
+    
     m_observers.notify(&Observer::onApplicationStarting, *this);
 
 #ifdef _WIN32
@@ -131,17 +123,27 @@ void Application::start()
     // First we start all the servers, note that the Servers::startAll() function does not block
     servers().startAll();
 
+    size_t running = m_servers.numberOfRunningServers();
+    NEMU_LOG_INFO("Application started ({} server{} running", running, ((running != 1) ? "s" : ""));
+
     m_observers.notify(&Observer::onApplicationStarted, *this);
 
     // By default we want the Application::start() function to block so we call Servers::joinAll() which will do a join
     // on all the servers
     servers().joinAll();
 
+    running = m_servers.numberOfRunningServers();
+    NEMU_LOG_INFO("Application stopped ({} server{} running", running, ((running != 1) ? "s" : ""));
+
     m_observers.notify(&Observer::onApplicationStopped, *this);
 }
 
 void Application::stop()
 {
+    Log& logger = m_log;
+
+    NEMU_LOG_INFO("Application stopping");
+
     m_observers.notify(&Observer::onApplicationStopping, *this);
 
     servers().stopAll();

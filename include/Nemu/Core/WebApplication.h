@@ -1,11 +1,11 @@
 /*
-    Copyright (c) 2019-2021 Xavier Leclercq
+    Copyright (c) 2019-2022 Xavier Leclercq
     Released under the MIT License
     See https://github.com/nemu-cpp/core/blob/main/LICENSE.txt
 */
 
-#ifndef _NEMUFRAMEWORK_NEMU_CORE_WEBAPPLICATION_H_
-#define _NEMUFRAMEWORK_NEMU_CORE_WEBAPPLICATION_H_
+#ifndef _NEMU_CPP_CORE_WEBAPPLICATION_H_
+#define _NEMU_CPP_CORE_WEBAPPLICATION_H_
 
 #include "Application.h"
 #include "Configuration.h"
@@ -28,8 +28,9 @@ public:
         @param observer The observer to add.
         @param error The result of the constructor.
     */
-    WebApplication(const Configuration& configuration, std::shared_ptr<Observer> observer, Ishiko::Error& error);
-    WebApplication(const Configuration& configuration, std::shared_ptr<Routes> routes,
+    WebApplication(const Configuration& configuration, Log& log, std::shared_ptr<Observer> observer,
+        Ishiko::Error& error);
+    WebApplication(const Configuration& configuration, Log& log, std::shared_ptr<Routes> routes,
         std::shared_ptr<Observer> observer, Ishiko::Error& error);
 
     /// Returns the routes.
