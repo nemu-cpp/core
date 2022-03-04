@@ -109,6 +109,7 @@ public:
         observers.
         @param observer An observer.
     */
+    Server() = default;
     Server(std::shared_ptr<Observer> observer);
     /// Destructor.
     virtual ~Server() = default;
@@ -135,7 +136,5 @@ private:
 };
 
 }
-
-#include "linkoptions.h"
 
 #endif
