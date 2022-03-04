@@ -156,7 +156,7 @@
     <ClCompile Include="..\..\src\ErrorCategory.cpp" />
     <ClCompile Include="..\..\src\Server.cpp" />
     <ClCompile Include="..\..\src\Servers.cpp" />
-    <ClCompile Include="..\..\src\Log.cpp" />
+    <ClCompile Include="..\..\src\Logger.cpp" />
     <ClCompile Include="..\..\src\WebApplication.cpp" />
     <ClCompile Include="..\..\src\Route.cpp" />
     <ClCompile Include="..\..\src\Routes.cpp" />
@@ -168,16 +168,17 @@
     <ClCompile Include="..\..\src\ControlHandlerRegistration.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\include\Nemu\Core.h" />
+    <ClInclude Include="..\..\include\Nemu\Core.hpp" />
     <ClInclude Include="..\..\include\Nemu\Core\Configuration.h" />
     <ClInclude Include="..\..\include\Nemu\Core\Application.h" />
     <ClInclude Include="..\..\include\Nemu\Core\Applications.h" />
     <ClInclude Include="..\..\include\Nemu\Core\ErrorCategory.h" />
-    <ClInclude Include="..\..\include\Nemu\Core\Server.h" />
+    <ClInclude Include="..\..\include\Nemu\Core\Server.hpp" />
     <ClInclude Include="..\..\include\Nemu\Core\Servers.h" />
-    <ClInclude Include="..\..\include\Nemu\Core\Log.h" />
+    <ClInclude Include="..\..\include\Nemu\Core\linkoptions.hpp" />
+    <ClInclude Include="..\..\include\Nemu\Core\Logger.hpp" />
     <ClInclude Include="..\..\include\Nemu\Core\LoggingMacros.hpp" />
-    <ClInclude Include="..\..\include\Nemu\Core\WebApplication.h" />
+    <ClInclude Include="..\..\include\Nemu\Core\WebApplication.hpp" />
     <ClInclude Include="..\..\include\Nemu\Core\Route.h" />
     <ClInclude Include="..\..\include\Nemu\Core\Routes.h" />
     <ClInclude Include="..\..\include\Nemu\Core\WebRequest.h" />
@@ -185,7 +186,6 @@
     <ClInclude Include="..\..\include\Nemu\Core\AccessLog.h" />
     <ClInclude Include="..\..\include\Nemu\Core\Views.h" />
     <ClInclude Include="..\..\include\Nemu\Core\TemplatingEngine.h" />
-    <ClInclude Include="..\..\include\Nemu\Core\linkoptions.h" />
     <ClInclude Include="..\..\src\ControlHandlerRegistration.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
