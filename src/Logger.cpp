@@ -4,14 +4,14 @@
     See https://github.com/nemu-cpp/core/blob/main/LICENSE.txt
 */
 
-#include "Log.h"
+#include "Logger.hpp"
 
 using namespace Ishiko;
 
 namespace Nemu
 {
 
-Log::Log(LoggingSink& sink)
+Logger::Logger(LoggingSink& sink)
     : m_logger(sink)
 {
     // TODO: need to support the following logging format

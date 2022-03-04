@@ -7,7 +7,7 @@
 #ifndef _NEMU_CPP_CORE_APPLICATION_H_
 #define _NEMU_CPP_CORE_APPLICATION_H_
 
-#include "Log.h"
+#include "Logger.hpp"
 #include "Servers.h"
 
 namespace Nemu
@@ -83,7 +83,7 @@ public:
         observers.
         @param observer An observer.
     */
-    Application(Log& log, std::shared_ptr<Observer> observer);
+    Application(Logger& logger, std::shared_ptr<Observer> observer);
     /// Destructor.
     virtual ~Application();
 
@@ -121,13 +121,11 @@ private:
 #ifdef _WIN32
     std::unique_ptr<ControlHandlerRegistration> m_controlHandlerRegistration;
 #endif
-    Log& m_log;
+    Logger& m_logger;
     Servers m_servers;
     Observers m_observers;
 };
 
 }
-
-#include "linkoptions.h"
 
 #endif

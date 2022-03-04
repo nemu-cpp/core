@@ -80,8 +80,8 @@ ISHIKO_CPP_BOOST_ROOT ?= $(ISHIKO_CPP_THIRD_PARTY_BOOST)
 
 all: ../bakefile/../../lib/lib$(if $(call _equal,$(config),Debug),NemuCore-d,NemuCore).a
 
-../bakefile/../../lib/lib$(if $(call _equal,$(config),Debug),NemuCore-d,NemuCore).a: $(_builddir)NemuCore_Configuration.o $(_builddir)NemuCore_Application.o $(_builddir)NemuCore_Applications.o $(_builddir)NemuCore_ErrorCategory.o $(_builddir)NemuCore_Server.o $(_builddir)NemuCore_Servers.o $(_builddir)NemuCore_Log.o $(_builddir)NemuCore_WebApplication.o $(_builddir)NemuCore_Route.o $(_builddir)NemuCore_Routes.o $(_builddir)NemuCore_WebRequest.o $(_builddir)NemuCore_WebResponseBuilder.o $(_builddir)NemuCore_AccessLog.o $(_builddir)NemuCore_Views.o $(_builddir)NemuCore_TemplatingEngine.o $(_builddir)NemuCore_ControlHandlerRegistration.o
-	$(AR) rc $@ $(_builddir)NemuCore_Configuration.o $(_builddir)NemuCore_Application.o $(_builddir)NemuCore_Applications.o $(_builddir)NemuCore_ErrorCategory.o $(_builddir)NemuCore_Server.o $(_builddir)NemuCore_Servers.o $(_builddir)NemuCore_Log.o $(_builddir)NemuCore_WebApplication.o $(_builddir)NemuCore_Route.o $(_builddir)NemuCore_Routes.o $(_builddir)NemuCore_WebRequest.o $(_builddir)NemuCore_WebResponseBuilder.o $(_builddir)NemuCore_AccessLog.o $(_builddir)NemuCore_Views.o $(_builddir)NemuCore_TemplatingEngine.o $(_builddir)NemuCore_ControlHandlerRegistration.o
+../bakefile/../../lib/lib$(if $(call _equal,$(config),Debug),NemuCore-d,NemuCore).a: $(_builddir)NemuCore_Configuration.o $(_builddir)NemuCore_Application.o $(_builddir)NemuCore_Applications.o $(_builddir)NemuCore_ErrorCategory.o $(_builddir)NemuCore_Server.o $(_builddir)NemuCore_Servers.o $(_builddir)NemuCore_Logger.o $(_builddir)NemuCore_WebApplication.o $(_builddir)NemuCore_Route.o $(_builddir)NemuCore_Routes.o $(_builddir)NemuCore_WebRequest.o $(_builddir)NemuCore_WebResponseBuilder.o $(_builddir)NemuCore_AccessLog.o $(_builddir)NemuCore_Views.o $(_builddir)NemuCore_TemplatingEngine.o $(_builddir)NemuCore_ControlHandlerRegistration.o
+	$(AR) rc $@ $(_builddir)NemuCore_Configuration.o $(_builddir)NemuCore_Application.o $(_builddir)NemuCore_Applications.o $(_builddir)NemuCore_ErrorCategory.o $(_builddir)NemuCore_Server.o $(_builddir)NemuCore_Servers.o $(_builddir)NemuCore_Logger.o $(_builddir)NemuCore_WebApplication.o $(_builddir)NemuCore_Route.o $(_builddir)NemuCore_Routes.o $(_builddir)NemuCore_WebRequest.o $(_builddir)NemuCore_WebResponseBuilder.o $(_builddir)NemuCore_AccessLog.o $(_builddir)NemuCore_Views.o $(_builddir)NemuCore_TemplatingEngine.o $(_builddir)NemuCore_ControlHandlerRegistration.o
 	$(RANLIB) $@
 
 $(_builddir)NemuCore_Configuration.o: ../../src/Configuration.cpp
@@ -102,8 +102,8 @@ $(_builddir)NemuCore_Server.o: ../../src/Server.cpp
 $(_builddir)NemuCore_Servers.o: ../../src/Servers.cpp
 	$(CXX) -c -o $@ $(CPPFLAGS) $(CXXFLAGS) -MD -MP -fPIC -DPIC -pthread -I$(ISHIKO_CPP_FMT_ROOT)/include -I$(ISHIKO_CPP_LOGGING_ROOT)/include -I$(ISHIKO_CPP_ERRORS_ROOT)/include -I$(ISHIKO_CPP_BOOST_ROOT)/include -I../../include/Nemu/Core -std=c++11 ../../src/Servers.cpp
 
-$(_builddir)NemuCore_Log.o: ../../src/Log.cpp
-	$(CXX) -c -o $@ $(CPPFLAGS) $(CXXFLAGS) -MD -MP -fPIC -DPIC -pthread -I$(ISHIKO_CPP_FMT_ROOT)/include -I$(ISHIKO_CPP_LOGGING_ROOT)/include -I$(ISHIKO_CPP_ERRORS_ROOT)/include -I$(ISHIKO_CPP_BOOST_ROOT)/include -I../../include/Nemu/Core -std=c++11 ../../src/Log.cpp
+$(_builddir)NemuCore_Logger.o: ../../src/Logger.cpp
+	$(CXX) -c -o $@ $(CPPFLAGS) $(CXXFLAGS) -MD -MP -fPIC -DPIC -pthread -I$(ISHIKO_CPP_FMT_ROOT)/include -I$(ISHIKO_CPP_LOGGING_ROOT)/include -I$(ISHIKO_CPP_ERRORS_ROOT)/include -I$(ISHIKO_CPP_BOOST_ROOT)/include -I../../include/Nemu/Core -std=c++11 ../../src/Logger.cpp
 
 $(_builddir)NemuCore_WebApplication.o: ../../src/WebApplication.cpp
 	$(CXX) -c -o $@ $(CPPFLAGS) $(CXXFLAGS) -MD -MP -fPIC -DPIC -pthread -I$(ISHIKO_CPP_FMT_ROOT)/include -I$(ISHIKO_CPP_LOGGING_ROOT)/include -I$(ISHIKO_CPP_ERRORS_ROOT)/include -I$(ISHIKO_CPP_BOOST_ROOT)/include -I../../include/Nemu/Core -std=c++11 ../../src/WebApplication.cpp

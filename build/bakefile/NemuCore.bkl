@@ -35,16 +35,17 @@ library NemuCore : IshikoLogging, IshikoErrors, Boost
 
     headers
     {
-        ../../include/Nemu/Core.h
+        ../../include/Nemu/Core.hpp
         ../../include/Nemu/Core/Configuration.h
         ../../include/Nemu/Core/Application.h
         ../../include/Nemu/Core/Applications.h
         ../../include/Nemu/Core/ErrorCategory.h
-        ../../include/Nemu/Core/Server.h
+        ../../include/Nemu/Core/Server.hpp
         ../../include/Nemu/Core/Servers.h
-        ../../include/Nemu/Core/Log.h
+        ../../include/Nemu/Core/linkoptions.hpp
+        ../../include/Nemu/Core/Logger.hpp
         ../../include/Nemu/Core/LoggingMacros.hpp
-        ../../include/Nemu/Core/WebApplication.h
+        ../../include/Nemu/Core/WebApplication.hpp
         ../../include/Nemu/Core/Route.h
         ../../include/Nemu/Core/Routes.h
         ../../include/Nemu/Core/WebRequest.h
@@ -52,7 +53,6 @@ library NemuCore : IshikoLogging, IshikoErrors, Boost
         ../../include/Nemu/Core/AccessLog.h
         ../../include/Nemu/Core/Views.h
         ../../include/Nemu/Core/TemplatingEngine.h
-        ../../include/Nemu/Core/linkoptions.h
 
         ../../src/ControlHandlerRegistration.h
     }
@@ -65,7 +65,7 @@ library NemuCore : IshikoLogging, IshikoErrors, Boost
         ../../src/ErrorCategory.cpp
         ../../src/Server.cpp
         ../../src/Servers.cpp
-        ../../src/Log.cpp
+        ../../src/Logger.cpp
         ../../src/WebApplication.cpp
         ../../src/Route.cpp
         ../../src/Routes.cpp
