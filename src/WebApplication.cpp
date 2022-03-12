@@ -9,9 +9,8 @@
 namespace Nemu
 {
 
-WebApplication::WebApplication(const Configuration& configuration, Logger& logger, std::shared_ptr<Observer> observer,
-    Ishiko::Error& error)
-    : Application(logger, observer), m_routes(std::make_shared<Routes>())
+WebApplication::WebApplication(const Configuration& configuration, Logger& logger, Ishiko::Error& error)
+    : Application(logger), m_routes(std::make_shared<Routes>())
 {
     // TODO: construct server entirely outside of WebApplication to give maximu flexibility
     //servers().append(std::make_shared<BeastServer>(configuration.numberOfThreads(), configuration.address(),
@@ -19,8 +18,8 @@ WebApplication::WebApplication(const Configuration& configuration, Logger& logge
 }
 
 WebApplication::WebApplication(const Configuration& configuration, Logger& logger, std::shared_ptr<Routes> routes,
-    std::shared_ptr<Observer> observer, Ishiko::Error& error)
-    : Application(logger, observer), m_routes(routes)
+    Ishiko::Error& error)
+    : Application(logger), m_routes(routes)
 {
     // TODO: construct server entirely outside of WebApplication to give maximu flexibility
     //servers().append(std::make_shared<BeastServer>(configuration.numberOfThreads(), configuration.address(),
