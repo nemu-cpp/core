@@ -83,7 +83,7 @@ public:
         observers.
         @param observer An observer.
     */
-    Application(Logger& logger, std::shared_ptr<Observer> observer);
+    Application(Logger& logger);
     /// Destructor.
     virtual ~Application();
 

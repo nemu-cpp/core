@@ -15,6 +15,7 @@ namespace Nemu
 class Configuration
 {
 public:
+    Configuration(int argc, char* argv[], const std::string& defaultAddress = "0.0.0.0", unsigned short defaultPort = 80);
     Configuration(int argc, const char* argv[], const std::string& defaultAddress = "0.0.0.0", unsigned short defaultPort = 80);
     Configuration(const std::string& address, unsigned short port);
 

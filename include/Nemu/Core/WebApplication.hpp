@@ -28,10 +28,9 @@ public:
         @param observer The observer to add.
         @param error The result of the constructor.
     */
-    WebApplication(const Configuration& configuration, Logger& logger, std::shared_ptr<Observer> observer,
-        Ishiko::Error& error);
+    WebApplication(const Configuration& configuration, Logger& logger, Ishiko::Error& error);
     WebApplication(const Configuration& configuration, Logger& logger, std::shared_ptr<Routes> routes,
-        std::shared_ptr<Observer> observer, Ishiko::Error& error);
+        Ishiko::Error& error);
 
     /// Returns the routes.
     Routes& routes();

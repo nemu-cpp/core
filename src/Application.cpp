@@ -96,10 +96,9 @@ void Application::Observers::removeDeletedObservers()
     m_observers.erase(it, m_observers.end());
 }
 
-Application::Application(Logger& logger, std::shared_ptr<Observer> observer)
+Application::Application(Logger& logger)
     : m_logger(logger)
 {
-    m_observers.add(observer);
     Applications::set(this);
 }
 
