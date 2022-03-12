@@ -1,5 +1,5 @@
 /*
-    Copyright (c) 2019-2021 Xavier Leclercq
+    Copyright (c) 2019-2022 Xavier Leclercq
 
     Permission is hereby granted, free of charge, to any person obtaining a
     copy of this software and associated documentation files (the "Software"),
@@ -27,6 +27,22 @@
 
 namespace Nemu
 {
+
+Configuration::Configuration(int argc, char* argv[], const std::string& defaultAddress, unsigned short defaultPort)
+{
+    boost::program_options::options_description description("Command line arguments");
+    description.add_options()
+        ("address", boost::program_options::value<std::string>(&m_address)->value_name("str")->default_value(defaultAddress),
+            "the listening IP address")
+        ("port", boost::program_options::value<unsigned short>(&m_port)->value_name("p")->default_value(defaultPort),
+            "the listening port")
+        ("threads", boost::program_options::value<size_t>(&m_numberOfThreads)->value_name("n")->default_value(1),
+            "the number of threads that will be used to process incoming requests");
+
+    boost::program_options::variables_map vm;
+    boost::program_options::store(boost::program_options::parse_command_line(argc, argv, description), vm);
+    boost::program_options::notify(vm);
+}
 
 Configuration::Configuration(int argc, const char* argv[], const std::string& defaultAddress, unsigned short defaultPort)
 {
