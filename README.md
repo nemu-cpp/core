@@ -1,6 +1,7 @@
 # Nemu/C++ Core
 
-
+This library provides the fundamental scaffolding for the Nemu/C++ framework. This library should be used in
+conjunction with other components to build applications.
 
 # Contents
 
