@@ -7,7 +7,7 @@
 #ifndef _NEMU_CPP_CORE_CONFIGURATION_H_
 #define _NEMU_CPP_CORE_CONFIGURATION_H_
 
-#include <string>
+#include <Ishiko/Networking.hpp>
 
 namespace Nemu
 {
@@ -15,18 +15,20 @@ namespace Nemu
 class Configuration
 {
 public:
-    Configuration(int argc, char* argv[], const std::string& defaultAddress = "0.0.0.0", unsigned short defaultPort = 80);
-    Configuration(int argc, const char* argv[], const std::string& defaultAddress = "0.0.0.0", unsigned short defaultPort = 80);
-    Configuration(const std::string& address, unsigned short port);
+    Configuration(int argc, char* argv[], Ishiko::Networking::IPv4Address defaultAddress,
+        Ishiko::Networking::Port defaultPort);
+    Configuration(int argc, const char* argv[], Ishiko::Networking::IPv4Address defaultAddress,
+        Ishiko::Networking::Port defaultPort);
+    Configuration(Ishiko::Networking::IPv4Address address, Ishiko::Networking::Port port);
 
     size_t numberOfThreads() const;
-    const std::string& address() const;
-    unsigned short port() const;
+    Ishiko::Networking::IPv4Address ipAddress() const;
+    Ishiko::Networking::Port port() const;
 
 private:
     size_t m_numberOfThreads;
-    std::string m_address;
-    unsigned short m_port;
+    Ishiko::Networking::IPv4Address m_ipAddress;
+    Ishiko::Networking::Port m_port;
 };
 
 }
