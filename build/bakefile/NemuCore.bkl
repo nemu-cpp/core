@@ -38,6 +38,7 @@ library NemuCore : IshikoNetworking, IshikoLogging, IshikoErrors, Boost
     {
         ../../include/Nemu/Core.hpp
         ../../include/Nemu/Core/Configuration.h
+        ../../include/Nemu/Core/ConnectionEngine.hpp
         ../../include/Nemu/Core/Application.h
         ../../include/Nemu/Core/Applications.h
         ../../include/Nemu/Core/ErrorCategory.h
