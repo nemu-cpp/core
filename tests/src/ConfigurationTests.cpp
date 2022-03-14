@@ -22,7 +22,7 @@ void ConfigurationTests::CreationTest1(Test& test)
 {
     int argc = 1;
     const char* argv[] = { "NemuTests" };
-    Nemu::Configuration configuration(argc, argv, IPv4Address::Any(), 80);
+    Nemu::Configuration configuration(argc, argv, TCPServerSocket::AllInterfaces, Port::http);
 
     ISHIKO_FAIL_IF_NEQ(configuration.ipAddress().toString(), "0.0.0.0");
     ISHIKO_FAIL_IF_NEQ(configuration.port(), 80);
@@ -42,7 +42,7 @@ void ConfigurationTests::CreationTest2(Test& test)
 
 void ConfigurationTests::CreationTest3(Test& test)
 {
-    Nemu::Configuration configuration(IPv4Address::Any(), 80);
+    Nemu::Configuration configuration(TCPServerSocket::AllInterfaces, Port::http);
 
     ISHIKO_FAIL_IF_NEQ(configuration.ipAddress().toString(), "0.0.0.0");
     ISHIKO_FAIL_IF_NEQ(configuration.port(), 80);
