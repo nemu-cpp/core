@@ -11,7 +11,6 @@
 #include "Core/Application.h"
 #include "Core/Applications.h"
 #include "Core/Configuration.h"
-#include "Core/ConnectionEngine.hpp"
 #include "Core/ErrorCategory.h"
 #include "Core/Logger.hpp"
 #include "Core/Route.h"

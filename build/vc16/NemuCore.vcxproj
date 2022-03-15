@@ -170,7 +170,6 @@
   <ItemGroup>
     <ClInclude Include="..\..\include\Nemu\Core.hpp" />
     <ClInclude Include="..\..\include\Nemu\Core\Configuration.h" />
-    <ClInclude Include="..\..\include\Nemu\Core\ConnectionEngine.hpp" />
     <ClInclude Include="..\..\include\Nemu\Core\Application.h" />
     <ClInclude Include="..\..\include\Nemu\Core\Applications.h" />
     <ClInclude Include="..\..\include\Nemu\Core\ErrorCategory.h" />
