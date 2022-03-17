@@ -7,7 +7,7 @@
 #include "ConfigurationTests.h"
 #include "Nemu/Core/Configuration.h"
 
-using namespace Ishiko::Networking;
+using namespace Ishiko;
 using namespace Ishiko::Tests;
 
 ConfigurationTests::ConfigurationTests(const TestNumber& number, const TestContext& context)
