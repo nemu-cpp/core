@@ -10,7 +10,6 @@
 #include <boost/program_options/parsers.hpp>
 
 using namespace Ishiko;
-using namespace Ishiko::Networking;
 using namespace std;
 
 namespace Nemu
