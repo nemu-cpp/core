@@ -15,20 +15,18 @@ namespace Nemu
 class Configuration
 {
 public:
-    Configuration(int argc, char* argv[], Ishiko::Networking::IPv4Address defaultAddress,
-        Ishiko::Networking::Port defaultPort);
-    Configuration(int argc, const char* argv[], Ishiko::Networking::IPv4Address defaultAddress,
-        Ishiko::Networking::Port defaultPort);
-    Configuration(Ishiko::Networking::IPv4Address address, Ishiko::Networking::Port port);
+    Configuration(int argc, char* argv[], Ishiko::IPv4Address defaultAddress, Ishiko::Port defaultPort);
+    Configuration(int argc, const char* argv[], Ishiko::IPv4Address defaultAddress, Ishiko::Port defaultPort);
+    Configuration(Ishiko::IPv4Address address, Ishiko::Port port);
 
     size_t numberOfThreads() const;
-    Ishiko::Networking::IPv4Address ipAddress() const;
-    Ishiko::Networking::Port port() const;
+    Ishiko::IPv4Address ipAddress() const;
+    Ishiko::Port port() const;
 
 private:
     size_t m_numberOfThreads;
-    Ishiko::Networking::IPv4Address m_ipAddress;
-    Ishiko::Networking::Port m_port;
+    Ishiko::IPv4Address m_ipAddress;
+    Ishiko::Port m_port;
 };
 
 }
