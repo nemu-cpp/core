@@ -7,6 +7,7 @@
 #ifndef _NEMU_CPP_CORE_SERVER_HPP_
 #define _NEMU_CPP_CORE_SERVER_HPP_
 
+#include "Routes.h"
 #include <vector>
 #include <string>
 #include <memory>
@@ -114,6 +115,12 @@ public:
 
     /// Returns the list of observers.
     Observers& observers();
+
+public:
+    // TOOD: hack, the server shouldn't have knowledge of routes. The web app should be the one registering a handler
+    // that handles the routes.
+    Routes* m_routes;
+    Logger* m_logger;
 
 private:
     Observers m_observers;
