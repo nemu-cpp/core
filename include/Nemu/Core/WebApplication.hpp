@@ -8,7 +8,6 @@
 #define _NEMU_CPP_CORE_WEBAPPLICATION_HPP_
 
 #include "Application.h"
-#include "Configuration.h"
 #include "Routes.h"
 #include "Views.h"
 #include <Ishiko/Errors.hpp>
@@ -23,14 +22,8 @@ class WebApplication : public Application
 {
 public:
     /// Constructor.
-    /**
-        @param configuration The configuration for the application.
-        @param observer The observer to add.
-        @param error The result of the constructor.
-    */
-    WebApplication(const Configuration& configuration, Logger& logger, Ishiko::Error& error);
-    WebApplication(const Configuration& configuration, Logger& logger, std::shared_ptr<Routes> routes,
-        Ishiko::Error& error);
+    WebApplication(Logger& logger, Ishiko::Error& error);
+    WebApplication(Logger& logger, std::shared_ptr<Routes> routes, Ishiko::Error& error);
 
     /// Returns the routes.
     Routes& routes();
