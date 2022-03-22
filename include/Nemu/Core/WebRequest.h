@@ -33,6 +33,7 @@ class WebRequest
 {
 public:
     /// Returns the URI part of the request.
+    // TODO: can we avoid the copy here
     virtual std::string URI() const = 0;
 };
 

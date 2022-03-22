@@ -6,17 +6,26 @@
 
 #include "WebApplication.hpp"
 
+using namespace Ishiko;
+using namespace std;
+
 namespace Nemu
 {
 
-WebApplication::WebApplication(Logger& logger, Ishiko::Error& error)
+WebApplication::WebApplication(shared_ptr<Server> server, Logger& logger, Error& error)
     : Application(logger), m_routes(std::make_shared<Routes>())
 {
+    server->m_logger = &logger;
+    server->m_routes = m_routes.get();
+    servers().append(server);
 }
 
-WebApplication::WebApplication(Logger& logger, std::shared_ptr<Routes> routes, Ishiko::Error& error)
+WebApplication::WebApplication(shared_ptr<Server> server, Logger& logger, shared_ptr<Routes> routes, Error& error)
     : Application(logger), m_routes(routes)
 {
+    server->m_logger = &logger;
+    server->m_routes = m_routes.get();
+    servers().append(server);
 }
 
 Routes& WebApplication::routes()
