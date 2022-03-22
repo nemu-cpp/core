@@ -8,7 +8,6 @@
 #include "Nemu/Core/Configuration.h"
 
 using namespace Ishiko;
-using namespace Ishiko::Tests;
 
 ConfigurationTests::ConfigurationTests(const TestNumber& number, const TestContext& context)
     : TestSequence(number, "Configuration tests", context)
@@ -24,9 +23,9 @@ void ConfigurationTests::CreationTest1(Test& test)
     const char* argv[] = { "NemuTests" };
     Nemu::Configuration configuration(argc, argv, TCPServerSocket::AllInterfaces, Port::http);
 
-    ISHIKO_FAIL_IF_NEQ(configuration.ipAddress().toString(), "0.0.0.0");
-    ISHIKO_FAIL_IF_NEQ(configuration.port(), 80);
-    ISHIKO_PASS();
+    ISHIKO_TEST_FAIL_IF_NEQ(configuration.ipAddress().toString(), "0.0.0.0");
+    ISHIKO_TEST_FAIL_IF_NEQ(configuration.port(), 80);
+    ISHIKO_TEST_PASS();
 }
 
 void ConfigurationTests::CreationTest2(Test& test)
@@ -35,16 +34,16 @@ void ConfigurationTests::CreationTest2(Test& test)
     const char* argv[] = { "NemuTests" };
     Nemu::Configuration configuration(argc, argv, IPv4Address::Localhost(), 8080);
 
-    ISHIKO_FAIL_IF_NEQ(configuration.ipAddress().toString(), "127.0.0.1");
-    ISHIKO_FAIL_IF_NEQ(configuration.port(), 8080);
-    ISHIKO_PASS();
+    ISHIKO_TEST_FAIL_IF_NEQ(configuration.ipAddress().toString(), "127.0.0.1");
+    ISHIKO_TEST_FAIL_IF_NEQ(configuration.port(), 8080);
+    ISHIKO_TEST_PASS();
 }
 
 void ConfigurationTests::CreationTest3(Test& test)
 {
     Nemu::Configuration configuration(TCPServerSocket::AllInterfaces, Port::http);
 
-    ISHIKO_FAIL_IF_NEQ(configuration.ipAddress().toString(), "0.0.0.0");
-    ISHIKO_FAIL_IF_NEQ(configuration.port(), 80);
-    ISHIKO_PASS();
+    ISHIKO_TEST_FAIL_IF_NEQ(configuration.ipAddress().toString(), "0.0.0.0");
+    ISHIKO_TEST_FAIL_IF_NEQ(configuration.port(), 80);
+    ISHIKO_TEST_PASS();
 }

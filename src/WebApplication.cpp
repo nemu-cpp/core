@@ -6,24 +6,26 @@
 
 #include "WebApplication.hpp"
 
+using namespace Ishiko;
+using namespace std;
+
 namespace Nemu
 {
 
-WebApplication::WebApplication(const Configuration& configuration, Logger& logger, Ishiko::Error& error)
+WebApplication::WebApplication(shared_ptr<Server> server, Logger& logger, Error& error)
     : Application(logger), m_routes(std::make_shared<Routes>())
 {
-    // TODO: construct server entirely outside of WebApplication to give maximu flexibility
-    //servers().append(std::make_shared<BeastServer>(configuration.numberOfThreads(), configuration.address(),
-    //    configuration.port(), *m_routes, m_views, observer, error));
+    server->m_logger = &logger;
+    server->m_routes = m_routes.get();
+    servers().append(server);
 }
 
-WebApplication::WebApplication(const Configuration& configuration, Logger& logger, std::shared_ptr<Routes> routes,
-    Ishiko::Error& error)
+WebApplication::WebApplication(shared_ptr<Server> server, Logger& logger, shared_ptr<Routes> routes, Error& error)
     : Application(logger), m_routes(routes)
 {
-    // TODO: construct server entirely outside of WebApplication to give maximu flexibility
-    //servers().append(std::make_shared<BeastServer>(configuration.numberOfThreads(), configuration.address(),
-    //    configuration.port(), *m_routes, m_views, observer, error));
+    server->m_logger = &logger;
+    server->m_routes = m_routes.get();
+    servers().append(server);
 }
 
 Routes& WebApplication::routes()
