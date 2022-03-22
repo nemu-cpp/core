@@ -9,15 +9,15 @@
 
 #include <Ishiko/Tests.hpp>
 
-class ConfigurationTests : public Ishiko::Tests::TestSequence
+class ConfigurationTests : public Ishiko::TestSequence
 {
 public:
-    ConfigurationTests(const Ishiko::Tests::TestNumber& number, const Ishiko::Tests::TestContext& context);
+    ConfigurationTests(const Ishiko::TestNumber& number, const Ishiko::TestContext& context);
 
 private:
-    static void CreationTest1(Ishiko::Tests::Test& test);
-    static void CreationTest2(Ishiko::Tests::Test& test);
-    static void CreationTest3(Ishiko::Tests::Test& test);
+    static void CreationTest1(Ishiko::Test& test);
+    static void CreationTest2(Ishiko::Test& test);
+    static void CreationTest3(Ishiko::Test& test);
 };
 
 #endif

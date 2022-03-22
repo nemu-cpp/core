@@ -11,7 +11,7 @@
 #include <Ishiko/Tests.hpp>
 #include <boost/filesystem/operations.hpp>
 
-using namespace Ishiko::Tests;
+using namespace Ishiko;
 
 int main(int argc, char* argv[])
 {

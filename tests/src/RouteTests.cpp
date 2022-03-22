@@ -7,7 +7,7 @@
 #include "RouteTests.h"
 #include "Nemu/Core/Route.h"
 
-using namespace Ishiko::Tests;
+using namespace Ishiko;
 using namespace Nemu;
 
 RouteTests::RouteTests(const TestNumber& number, const TestContext& context)
@@ -19,9 +19,9 @@ RouteTests::RouteTests(const TestNumber& number, const TestContext& context)
 void RouteTests::CreationTest1(Test& test)
 {
     Route route("/",
-        [](const WebRequest& request, WebResponseBuilder& response, void* handlerData, Logger& logger)
+        [](const WebRequest& request, WebResponseBuilder& response, void* handlerData, Nemu::Logger& logger)
         {
         });
 
-    ISHIKO_PASS();
+    ISHIKO_TEST_PASS();
 }

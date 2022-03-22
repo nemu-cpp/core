@@ -9,13 +9,13 @@
 
 #include <Ishiko/Tests.hpp>
 
-class RouteTests : public Ishiko::Tests::TestSequence
+class RouteTests : public Ishiko::TestSequence
 {
 public:
-    RouteTests(const Ishiko::Tests::TestNumber& number, const Ishiko::Tests::TestContext& context);
+    RouteTests(const Ishiko::TestNumber& number, const Ishiko::TestContext& context);
 
 private:
-    static void CreationTest1(Ishiko::Tests::Test& test);
+    static void CreationTest1(Ishiko::Test& test);
 };
 
 #endif
