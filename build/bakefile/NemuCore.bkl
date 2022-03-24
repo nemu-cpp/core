@@ -3,6 +3,7 @@ import $(ishikopath)/errors/include/Ishiko/Errors.bkl;
 import $(ishikopath)/logging/include/Ishiko/Logging.bkl;
 import $(ishikopath)/networking/include/Ishiko/Networking.bkl;
 import $(ishikopath)/third-party-glue/include/Ishiko/ThirdParty/Boost.bkl;
+import $(ishikopath)/time/include/Ishiko/Time.bkl;
 
 toolsets = gnu vs2019 vs2017 vs2015 vs2013;
 
@@ -12,7 +13,7 @@ vs2017.solutionfile = ../vc15/NemuCore.sln;
 vs2015.solutionfile = ../vc14/NemuCore.sln;
 vs2013.solutionfile = ../vc12/NemuCore.sln;
 
-library NemuCore : IshikoNetworking, IshikoLogging, IshikoErrors, Boost
+library NemuCore : IshikoNetworking, IshikoTime, IshikoLogging, IshikoErrors, Boost
 {
     archs = x86 x86_64;
    
