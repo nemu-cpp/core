@@ -18,12 +18,12 @@ class Views
 {
 public:
     Views();
-    Views(std::shared_ptr<TemplatingEngine> engine);
+    Views(std::shared_ptr<TemplateEngine> engine);
 
-    const TemplatingEngine& engine() const;
+    const TemplateEngine& engine() const;
 
 private:
-    std::shared_ptr<TemplatingEngine> m_engine;
+    std::shared_ptr<TemplateEngine> m_engine;
 };
 
 }
