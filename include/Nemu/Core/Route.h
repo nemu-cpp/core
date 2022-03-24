@@ -8,8 +8,8 @@
 #define _NEMU_CPP_CORE_ROUTE_H_
 
 #include "Logger.hpp"
-#include "WebRequest.h"
-#include "WebResponseBuilder.h"
+#include "WebRequest.hpp"
+#include "WebResponseBuilder.hpp"
 #include <string>
 #include <memory>
 

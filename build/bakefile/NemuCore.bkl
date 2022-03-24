@@ -50,11 +50,11 @@ library NemuCore : IshikoNetworking, IshikoTime, IshikoLogging, IshikoErrors, Bo
         ../../include/Nemu/Core/WebApplication.hpp
         ../../include/Nemu/Core/Route.h
         ../../include/Nemu/Core/Routes.h
-        ../../include/Nemu/Core/WebRequest.h
-        ../../include/Nemu/Core/WebResponseBuilder.h
+        ../../include/Nemu/Core/WebRequest.hpp
+        ../../include/Nemu/Core/WebResponseBuilder.hpp
         ../../include/Nemu/Core/AccessLog.h
         ../../include/Nemu/Core/Views.h
-        ../../include/Nemu/Core/TemplatingEngine.h
+        ../../include/Nemu/Core/TemplateEngine.hpp
 
         ../../src/ControlHandlerRegistration.h
     }

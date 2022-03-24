@@ -181,11 +181,11 @@
     <ClInclude Include="..\..\include\Nemu\Core\WebApplication.hpp" />
     <ClInclude Include="..\..\include\Nemu\Core\Route.h" />
     <ClInclude Include="..\..\include\Nemu\Core\Routes.h" />
-    <ClInclude Include="..\..\include\Nemu\Core\WebRequest.h" />
-    <ClInclude Include="..\..\include\Nemu\Core\WebResponseBuilder.h" />
+    <ClInclude Include="..\..\include\Nemu\Core\WebRequest.hpp" />
+    <ClInclude Include="..\..\include\Nemu\Core\WebResponseBuilder.hpp" />
     <ClInclude Include="..\..\include\Nemu\Core\AccessLog.h" />
     <ClInclude Include="..\..\include\Nemu\Core\Views.h" />
-    <ClInclude Include="..\..\include\Nemu\Core\TemplatingEngine.h" />
+    <ClInclude Include="..\..\include\Nemu\Core\TemplateEngine.hpp" />
     <ClInclude Include="..\..\src\ControlHandlerRegistration.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

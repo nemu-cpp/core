@@ -17,11 +17,11 @@
 #include "Core/Routes.h"
 #include "Core/Server.hpp"
 #include "Core/Servers.h"
-#include "Core/TemplatingEngine.h"
+#include "Core/TemplateEngine.hpp"
 #include "Core/Views.h"
 #include "Core/WebApplication.hpp"
-#include "Core/WebRequest.h"
-#include "Core/WebResponseBuilder.h"
+#include "Core/WebRequest.hpp"
+#include "Core/WebResponseBuilder.hpp"
 
 #include "Core/linkoptions.hpp"
 

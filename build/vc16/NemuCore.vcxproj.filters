@@ -56,10 +56,10 @@
     <ClInclude Include="..\..\include\Nemu\Core\Routes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\include\Nemu\Core\WebRequest.h">
+    <ClInclude Include="..\..\include\Nemu\Core\WebRequest.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\include\Nemu\Core\WebResponseBuilder.h">
+    <ClInclude Include="..\..\include\Nemu\Core\WebResponseBuilder.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\include\Nemu\Core\AccessLog.h">
@@ -68,7 +68,7 @@
     <ClInclude Include="..\..\include\Nemu\Core\Views.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\include\Nemu\Core\TemplatingEngine.h">
+    <ClInclude Include="..\..\include\Nemu\Core\TemplateEngine.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\ControlHandlerRegistration.h">
