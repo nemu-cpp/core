@@ -21,7 +21,7 @@ public:
     WebResponseBuilder(const Views& views);
 
     virtual void setStatus(unsigned int status) = 0;
-    virtual void setDateHeader(Ishiko::TimePoint time) = 0;
+    virtual void setDateHeader(const Ishiko::UTCTime& time) = 0;
     virtual std::string& body() = 0;
 
     /// Renders a page using the default templating engine.
