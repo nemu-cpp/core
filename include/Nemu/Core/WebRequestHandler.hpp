@@ -30,14 +30,22 @@ public:
         Ishiko::Logger& logger);
 
     WebRequestHandler(RequestHandler handler);
+    template<class Callable> WebRequestHandler(Callable handler);
     WebRequestHandler(RequestHandler handler, std::shared_ptr<void> handlerData);
 
     void run(const WebRequest& request, WebResponseBuilder& response, Ishiko::Logger& logger) const;
 
 private:
-    RequestHandler m_handler;
+    // TODO: std::function and _data are redundant but before I change this I want to understand the performance implications better
+    std::function<void(const WebRequest& request, WebResponseBuilder& response, void* handlerData, Ishiko::Logger& logger)> m_handler;
     std::shared_ptr<void> m_handlerData;
 };
+
+template<class Callable>
+WebRequestHandler::WebRequestHandler(Callable handler)
+    : m_handler(handler)
+{
+}
 
 }
 
