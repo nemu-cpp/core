@@ -158,11 +158,17 @@
   <ItemGroup>
     <ClCompile Include="..\..\src\main.cpp" />
     <ClCompile Include="..\..\src\ConfigurationTests.cpp" />
+    <ClCompile Include="..\..\src\FileSystemWebRequestHandlerTests.cpp" />
+    <ClCompile Include="..\..\src\FunctionWebRequestHandlerTests.cpp" />
+    <ClCompile Include="..\..\src\HardcodedWebRequestHandlerTests.cpp" />
     <ClCompile Include="..\..\src\RouteTests.cpp" />
     <ClCompile Include="..\..\src\RoutesTests.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\ConfigurationTests.h" />
+    <ClInclude Include="..\..\src\FileSystemWebRequestHandlerTests.hpp" />
+    <ClInclude Include="..\..\src\FunctionWebRequestHandlerTests.hpp" />
+    <ClInclude Include="..\..\src\HardcodedWebRequestHandlerTests.hpp" />
     <ClInclude Include="..\..\src\RouteTests.h" />
     <ClInclude Include="..\..\src\RoutesTests.h" />
   </ItemGroup>

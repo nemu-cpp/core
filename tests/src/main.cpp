@@ -5,11 +5,13 @@
 */
 
 #include "ConfigurationTests.h"
+#include "FileSystemWebRequestHandlerTests.hpp"
+#include "FunctionWebRequestHandlerTests.hpp"
+#include "HardcodedWebRequestHandlerTests.hpp"
 #include "RouteTests.h"
 #include "RoutesTests.h"
 #include "Nemu/Core/linkoptions.hpp"
 #include <Ishiko/Tests.hpp>
-#include <boost/filesystem/operations.hpp>
 
 using namespace Ishiko;
 
@@ -17,14 +19,16 @@ int main(int argc, char* argv[])
 {
     TestHarness theTestHarness("NemuCore");
 
-    theTestHarness.context().setTestOutputDirectory("../../TestOutput");
-    boost::filesystem::create_directories("../../TestOutput");
-    theTestHarness.context().setReferenceDataDirectory("../../ReferenceData");
+    theTestHarness.context().setTestOutputDirectory("../../output");
+    theTestHarness.context().setReferenceDataDirectory("../../reference");
 
     TestSequence& theTests = theTestHarness.tests();
     theTests.append<ConfigurationTests>();
     theTests.append<RouteTests>();
     theTests.append<RoutesTests>();
+    theTests.append<HardcodedWebRequestHandlerTests>();
+    theTests.append<FunctionWebRequestHandlerTests>();
+    theTests.append<FileSystemWebRequestHandlerTests>();
 
     return theTestHarness.run();
 }
