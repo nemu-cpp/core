@@ -6,6 +6,8 @@
 
 #include "Routes.h"
 
+using namespace Ishiko;
+
 namespace Nemu
 {
 
