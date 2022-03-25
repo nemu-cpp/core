@@ -9,6 +9,7 @@
 
 #include "Nemu/Core/WebResponseBuilder.hpp"
 #include <Ishiko/Time.hpp>
+#include <ostream>
 #include <string>
 
 class TestWebResponseBuilder : public Nemu::WebResponseBuilder
@@ -21,6 +22,8 @@ public:
     std::string& body() override;
 
     unsigned int statusCode() const;
+
+    void save(std::ostream& stream) const;
 
 private:
     unsigned int m_statusCode;

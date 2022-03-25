@@ -13,7 +13,12 @@
 class TestWebRequest : public Nemu::WebRequest
 {
 public:
+    TestWebRequest(std::string uri);
+
     std::string URI() const override;
+
+private:
+    std::string m_uri;
 };
 
 #endif

@@ -19,7 +19,7 @@ HardcodedWebRequestHandlerTests::HardcodedWebRequestHandlerTests(const TestNumbe
     : TestSequence(number, "HardcodedWebRequestHandler tests", context)
 {
     append<HeapAllocationErrorsTest>("Constructor test 1", ConstructorTest1);
-    append<Test>("run test 1", RunTest1);
+    append<HeapAllocationErrorsTest>("run test 1", RunTest1);
 }
 
 void HardcodedWebRequestHandlerTests::ConstructorTest1(Test& test)
@@ -33,7 +33,7 @@ void HardcodedWebRequestHandlerTests::RunTest1(Test& test)
 {
     HardcodedWebRequestHandler requestHandler(200, "body");
 
-    TestWebRequest request;
+    TestWebRequest request("/");
     Views views;
     TestWebResponseBuilder responseBuilder(views);
 

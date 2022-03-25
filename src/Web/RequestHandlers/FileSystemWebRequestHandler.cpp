@@ -5,6 +5,7 @@
 */
 
 #include "Web/RequestHandlers/FileSystemWebRequestHandler.hpp"
+#include <Ishiko/FileSystem.hpp>
 
 using namespace boost::filesystem;
 using namespace Ishiko;
@@ -21,15 +22,17 @@ FileSystemWebRequestHandler::FileSystemWebRequestHandler(path root)
 
 void FileSystemWebRequestHandler::run(const WebRequest& request, WebResponseBuilder& response, Logger& logger)
 {
-    string path = request.URI();
-    if (path == "/")
+    string uri = request.URI();
+    if (uri == "/")
     {
         for (size_t i = 0; i < m_defaults.size(); ++i)
         {
+            response.setStatus(200);
             // TODO: handle multiple default paths correctly
-            //string path = m_root / m_defaults[i];
-            // TODO
-            //session.response().sendFile(path);
+            path filePath = (m_root / m_defaults[i]);
+            // TODO: handle error
+            Error error;
+            response.body() = FileSystem::ReadFile(filePath, error);
         }
     }
 }

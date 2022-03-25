@@ -8,7 +8,12 @@
 
 using namespace std;
 
+TestWebRequest::TestWebRequest(string uri)
+    : m_uri(move(uri))
+{
+}
+
 string TestWebRequest::URI() const
 {
-    return "dummy";
+    return m_uri;
 }
