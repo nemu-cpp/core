@@ -160,6 +160,7 @@
     <ClCompile Include="..\..\src\Route.cpp" />
     <ClCompile Include="..\..\src\Routes.cpp" />
     <ClCompile Include="..\..\src\WebRequest.cpp" />
+    <ClCompile Include="..\..\src\WebRequestHandler.cpp" />
     <ClCompile Include="..\..\src\WebResponseBuilder.cpp" />
     <ClCompile Include="..\..\src\AccessLog.cpp" />
     <ClCompile Include="..\..\src\Views.cpp" />
@@ -181,6 +182,7 @@
     <ClInclude Include="..\..\include\Nemu\Core\Route.h" />
     <ClInclude Include="..\..\include\Nemu\Core\Routes.h" />
     <ClInclude Include="..\..\include\Nemu\Core\WebRequest.hpp" />
+    <ClInclude Include="..\..\include\Nemu\Core\WebRequestHandler.hpp" />
     <ClInclude Include="..\..\include\Nemu\Core\WebResponseBuilder.hpp" />
     <ClInclude Include="..\..\include\Nemu\Core\AccessLog.h" />
     <ClInclude Include="..\..\include\Nemu\Core\Views.h" />

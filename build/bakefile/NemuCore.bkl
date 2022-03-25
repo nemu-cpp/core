@@ -51,6 +51,7 @@ library NemuCore : IshikoNetworking, IshikoTime, IshikoLogging, IshikoErrors, Bo
         ../../include/Nemu/Core/Route.h
         ../../include/Nemu/Core/Routes.h
         ../../include/Nemu/Core/WebRequest.hpp
+        ../../include/Nemu/Core/WebRequestHandler.hpp
         ../../include/Nemu/Core/WebResponseBuilder.hpp
         ../../include/Nemu/Core/AccessLog.h
         ../../include/Nemu/Core/Views.h
@@ -71,6 +72,7 @@ library NemuCore : IshikoNetworking, IshikoTime, IshikoLogging, IshikoErrors, Bo
         ../../src/Route.cpp
         ../../src/Routes.cpp
         ../../src/WebRequest.cpp
+        ../../src/WebRequestHandler.cpp
         ../../src/WebResponseBuilder.cpp
         ../../src/AccessLog.cpp
         ../../src/Views.cpp
