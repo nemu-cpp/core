@@ -11,6 +11,7 @@
 #include "Web/RequestHandlers/WebRequestHandler.hpp"
 #include "WebResponseBuilder.hpp"
 #include <Ishiko/Logging.hpp>
+#include <memory>
 #include <string>
 
 namespace Nemu
@@ -25,7 +26,7 @@ public:
         @param path The handler handles requests that match this path.
         @param handler The request handler.
     */
-    Route(const std::string& path, WebRequestHandler handler);
+    Route(const std::string& path, std::shared_ptr<WebRequestHandler> handler);
     
     /// Returns the path.
     const std::string& path() const;
@@ -34,7 +35,7 @@ public:
 
 private:
     std::string m_path;
-    WebRequestHandler m_handler;
+    std::shared_ptr<WebRequestHandler> m_handler;
 };
 
 }

@@ -7,4 +7,26 @@
 #ifndef _NEMU_CPP_CORE_WEB_REQUESTHANDLERS_FILESYSTEMWEBREQUESTHANDLER_HPP_
 #define _NEMU_CPP_CORE_WEB_REQUESTHANDLERS_FILESYSTEMWEBREQUESTHANDLER_HPP_
 
+#include "WebRequestHandler.hpp"
+#include <boost/filesystem.hpp>
+#include <string>
+#include <vector>
+
+namespace Nemu
+{
+
+class FileSystemWebRequestHandler : public WebRequestHandler
+{
+public:
+    FileSystemWebRequestHandler(boost::filesystem::path root);
+
+    void run(const WebRequest& request, WebResponseBuilder& response, Ishiko::Logger& logger) override;
+
+private:
+    boost::filesystem::path m_root;
+    std::vector<std::string> m_defaults;
+};
+
+}
+
 #endif

@@ -5,19 +5,16 @@
 */
 
 #include "Routes.h"
+#include "Web/RequestHandlers/HardcodedWebRequestHandler.hpp"
 
 using namespace Ishiko;
+using namespace std;
 
 namespace Nemu
 {
 
 Routes::Routes()
-    : m_defaultRoute("",
-        WebRequestHandler(
-            [](const WebRequest& request, WebResponseBuilder& response, void* handlerData, Logger& logger)
-            {
-                response.setStatus(404);
-            }))
+    : m_defaultRoute("", make_shared<HardcodedWebRequestHandler>(404, "The requested resource was not found"))
 {
 }
 
