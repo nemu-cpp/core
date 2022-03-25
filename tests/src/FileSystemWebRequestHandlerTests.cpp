@@ -34,8 +34,8 @@ void FileSystemWebRequestHandlerTests::RunTest1(FileComparisonTest& test)
 {
     path inputPath(test.context().getTestDataPath("html"));
 
-    path outputPath(test.context().getTestOutputPath("FileSystemWebRequestHandlerTests_RunTest1.txt"));
-    std::ofstream stream(outputPath.c_str());
+    path outputPath(test.context().getTestOutputPath("FileSystemWebRequestHandlerTests_RunTest1.bin"));
+    std::ofstream stream(outputPath.c_str(), std::ios::binary);
 
     FileSystemWebRequestHandler requestHandler(inputPath.string().c_str());
 
@@ -52,7 +52,7 @@ void FileSystemWebRequestHandlerTests::RunTest1(FileComparisonTest& test)
     responseBuilder.save(stream);
 
     test.setOutputFilePath(outputPath);
-    test.setReferenceFilePath(test.context().getReferenceDataPath("FileSystemWebRequestHandlerTests_RunTest1.txt"));
+    test.setReferenceFilePath(test.context().getReferenceDataPath("FileSystemWebRequestHandlerTests_RunTest1.bin"));
 
     ISHIKO_TEST_PASS();
 }

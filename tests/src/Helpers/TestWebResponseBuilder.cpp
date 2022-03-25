@@ -36,6 +36,6 @@ unsigned int TestWebResponseBuilder::statusCode() const
 
 void TestWebResponseBuilder::save(ostream& stream) const
 {
-    stream << "Status Code: " << m_statusCode << std::endl;
-    stream << "Body: " << std::endl << m_body;
+    stream << "Status Code: " << m_statusCode << "\r\n";
+    stream << "Body:\r\n" << m_body;
 }
