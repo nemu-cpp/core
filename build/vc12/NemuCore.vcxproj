@@ -153,13 +153,14 @@
     <ClCompile Include="..\..\src\Configuration.cpp" />
     <ClCompile Include="..\..\src\Application.cpp" />
     <ClCompile Include="..\..\src\Applications.cpp" />
-    <ClCompile Include="..\..\src\ErrorCategory.cpp" />
+    <ClCompile Include="..\..\src\NemuErrorCategory.cpp" />
     <ClCompile Include="..\..\src\Server.cpp" />
     <ClCompile Include="..\..\src\Servers.cpp" />
     <ClCompile Include="..\..\src\WebApplication.cpp" />
     <ClCompile Include="..\..\src\Route.cpp" />
     <ClCompile Include="..\..\src\Routes.cpp" />
     <ClCompile Include="..\..\src\WebRequest.cpp" />
+    <ClCompile Include="..\..\src\WebRequestHandler.cpp" />
     <ClCompile Include="..\..\src\WebResponseBuilder.cpp" />
     <ClCompile Include="..\..\src\AccessLog.cpp" />
     <ClCompile Include="..\..\src\Views.cpp" />
@@ -172,7 +173,7 @@
     <ClInclude Include="..\..\include\Nemu\Core\Configuration.h" />
     <ClInclude Include="..\..\include\Nemu\Core\Application.h" />
     <ClInclude Include="..\..\include\Nemu\Core\Applications.h" />
-    <ClInclude Include="..\..\include\Nemu\Core\ErrorCategory.h" />
+    <ClInclude Include="..\..\include\Nemu\Core\NemuErrorCategory.hpp" />
     <ClInclude Include="..\..\include\Nemu\Core\Server.hpp" />
     <ClInclude Include="..\..\include\Nemu\Core\Servers.h" />
     <ClInclude Include="..\..\include\Nemu\Core\linkoptions.hpp" />
@@ -181,6 +182,7 @@
     <ClInclude Include="..\..\include\Nemu\Core\Route.h" />
     <ClInclude Include="..\..\include\Nemu\Core\Routes.h" />
     <ClInclude Include="..\..\include\Nemu\Core\WebRequest.hpp" />
+    <ClInclude Include="..\..\include\Nemu\Core\WebRequestHandler.hpp" />
     <ClInclude Include="..\..\include\Nemu\Core\WebResponseBuilder.hpp" />
     <ClInclude Include="..\..\include\Nemu\Core\AccessLog.h" />
     <ClInclude Include="..\..\include\Nemu\Core\Views.h" />

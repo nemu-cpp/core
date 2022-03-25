@@ -13,10 +13,11 @@ namespace Nemu
 
 Routes::Routes()
     : m_defaultRoute("",
-        [](const WebRequest& request, WebResponseBuilder& response, void* handlerData, Logger& logger)
-        {
-            response.setStatus(404);
-        })
+        WebRequestHandler(
+            [](const WebRequest& request, WebResponseBuilder& response, void* handlerData, Logger& logger)
+            {
+                response.setStatus(404);
+            }))
 {
 }
 
