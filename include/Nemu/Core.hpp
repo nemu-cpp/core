@@ -22,7 +22,10 @@
 #include "Core/Views.h"
 #include "Core/WebApplication.hpp"
 #include "Core/WebRequest.hpp"
-#include "Core/WebRequestHandler.hpp"
 #include "Core/WebResponseBuilder.hpp"
+#include "Core/Web/RequestHandlers/FileSystemWebRequestHandler.hpp"
+#include "Core/Web/RequestHandlers/FunctionWebRequestHandler.hpp"
+#include "Core/Web/RequestHandlers/HardcodedWebRequestHandler.hpp"
+#include "Core/Web/RequestHandlers/WebRequestHandler.hpp"
 
 #endif

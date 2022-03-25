@@ -1,5 +1,6 @@
 ishikopath = envvar("ISHIKO_CPP");
 import $(ishikopath)/errors/include/Ishiko/Errors.bkl;
+import $(ishikopath)/filesystem/include/Ishiko/FileSystem.bkl;
 import $(ishikopath)/logging/include/Ishiko/Logging.bkl;
 import $(ishikopath)/networking/include/Ishiko/Networking.bkl;
 import $(ishikopath)/third-party-glue/include/Ishiko/ThirdParty/Boost.bkl;
@@ -11,7 +12,7 @@ setting NEMU_CPP_CORE_ROOT
     default = '$(NEMU_CPP)/core';
 }
 
-template NemuCore : IshikoNetworking, IshikoTime, IshikoLogging, IshikoErrors, Boost
+template NemuCore : IshikoNetworking, IshikoFileSystem, IshikoTime, IshikoLogging, IshikoErrors, Boost
 {
     includedirs += $(NEMU_CPP_CORE_ROOT)/include;
 
