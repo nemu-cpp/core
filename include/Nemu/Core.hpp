@@ -12,7 +12,7 @@
 #include "Core/Applications.h"
 #include "Core/compileoptions.hpp"
 #include "Core/Configuration.h"
-#include "Core/ErrorCategory.h"
+#include "Core/NemuErrorCategory.hpp"
 #include "Core/linkoptions.hpp"
 #include "Core/Route.h"
 #include "Core/Routes.h"
@@ -22,6 +22,7 @@
 #include "Core/Views.h"
 #include "Core/WebApplication.hpp"
 #include "Core/WebRequest.hpp"
+#include "Core/WebRequestHandler.hpp"
 #include "Core/WebResponseBuilder.hpp"
 
 #endif

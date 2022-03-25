@@ -42,7 +42,7 @@ library NemuCore : IshikoNetworking, IshikoTime, IshikoLogging, IshikoErrors, Bo
         ../../include/Nemu/Core/Configuration.h
         ../../include/Nemu/Core/Application.h
         ../../include/Nemu/Core/Applications.h
-        ../../include/Nemu/Core/ErrorCategory.h
+        ../../include/Nemu/Core/NemuErrorCategory.hpp
         ../../include/Nemu/Core/Server.hpp
         ../../include/Nemu/Core/Servers.h
         ../../include/Nemu/Core/linkoptions.hpp
@@ -65,7 +65,7 @@ library NemuCore : IshikoNetworking, IshikoTime, IshikoLogging, IshikoErrors, Bo
         ../../src/Configuration.cpp
         ../../src/Application.cpp
         ../../src/Applications.cpp
-        ../../src/ErrorCategory.cpp
+        ../../src/NemuErrorCategory.cpp
         ../../src/Server.cpp
         ../../src/Servers.cpp
         ../../src/WebApplication.cpp
