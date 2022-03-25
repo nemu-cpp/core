@@ -56,6 +56,7 @@ library NemuCore : IshikoNetworking, IshikoTime, IshikoLogging, IshikoErrors, Bo
         ../../include/Nemu/Core/Views.h
         ../../include/Nemu/Core/TemplateEngine.hpp
         ../../include/Nemu/Core/Web/RequestHandlers/FileSystemWebRequestHandler.hpp
+        ../../include/Nemu/Core/Web/RequestHandlers/FunctionWebRequestHandler.hpp
         ../../include/Nemu/Core/Web/RequestHandlers/HardcodedWebRequestHandler.hpp
         ../../include/Nemu/Core/Web/RequestHandlers/WebRequestHandler.hpp
 
@@ -80,6 +81,7 @@ library NemuCore : IshikoNetworking, IshikoTime, IshikoLogging, IshikoErrors, Bo
         ../../src/Views.cpp
         ../../src/TemplatingEngine.cpp
         ../../src/Web/RequestHandlers/FileSystemWebRequestHandler.cpp
+        ../../src/Web/RequestHandlers/FunctionWebRequestHandler.cpp
         ../../src/Web/RequestHandlers/HardcodedWebRequestHandler.cpp
         ../../src/Web/RequestHandlers/WebRequestHandler.cpp
     }
