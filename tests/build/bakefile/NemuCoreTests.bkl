@@ -29,6 +29,8 @@ program NemuCoreTests : NemuCore, IshikoTests
         ../../src/HardcodedWebRequestHandlerTests.hpp
         ../../src/RouteTests.h
         ../../src/RoutesTests.h
+        ../../src/Helpers/TestWebRequest.hpp
+        ../../src/Helpers/TestWebResponseBuilder.hpp
     }
 
     sources
@@ -40,5 +42,7 @@ program NemuCoreTests : NemuCore, IshikoTests
         ../../src/HardcodedWebRequestHandlerTests.cpp
         ../../src/RouteTests.cpp
         ../../src/RoutesTests.cpp
+        ../../src/Helpers/TestWebRequest.cpp
+        ../../src/Helpers/TestWebResponseBuilder.cpp
     }
 }

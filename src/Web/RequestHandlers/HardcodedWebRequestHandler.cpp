@@ -18,9 +18,8 @@ HardcodedWebRequestHandler::HardcodedWebRequestHandler(unsigned int statusCode, 
 
 void HardcodedWebRequestHandler::run(const WebRequest& request, WebResponseBuilder& response, Logger& logger)
 {
-    // TODO
-    //session.response().setStatusCode(m_statusCode);
-    //session.response().sendBuffer();
+    response.setStatus(m_statusCode);
+    response.body() = m_responseBody;
 }
 
 }
