@@ -1,5 +1,6 @@
 ishikopath = envvar("ISHIKO_CPP");
 import $(ishikopath)/errors/include/Ishiko/Errors.bkl;
+import $(ishikopath)/filesystem/include/Ishiko/FileSystem.bkl;
 import $(ishikopath)/logging/include/Ishiko/Logging.bkl;
 import $(ishikopath)/networking/include/Ishiko/Networking.bkl;
 import $(ishikopath)/third-party-glue/include/Ishiko/ThirdParty/Boost.bkl;
@@ -13,7 +14,7 @@ vs2017.solutionfile = ../vc15/NemuCore.sln;
 vs2015.solutionfile = ../vc14/NemuCore.sln;
 vs2013.solutionfile = ../vc12/NemuCore.sln;
 
-library NemuCore : IshikoNetworking, IshikoTime, IshikoLogging, IshikoErrors, Boost
+library NemuCore : IshikoNetworking, IshikoFileSystem, IshikoTime, IshikoLogging, IshikoErrors, Boost
 {
     archs = x86 x86_64;
    
@@ -51,11 +52,14 @@ library NemuCore : IshikoNetworking, IshikoTime, IshikoLogging, IshikoErrors, Bo
         ../../include/Nemu/Core/Route.h
         ../../include/Nemu/Core/Routes.h
         ../../include/Nemu/Core/WebRequest.hpp
-        ../../include/Nemu/Core/WebRequestHandler.hpp
         ../../include/Nemu/Core/WebResponseBuilder.hpp
         ../../include/Nemu/Core/AccessLog.h
         ../../include/Nemu/Core/Views.h
         ../../include/Nemu/Core/TemplateEngine.hpp
+        ../../include/Nemu/Core/Web/RequestHandlers/FileSystemWebRequestHandler.hpp
+        ../../include/Nemu/Core/Web/RequestHandlers/FunctionWebRequestHandler.hpp
+        ../../include/Nemu/Core/Web/RequestHandlers/HardcodedWebRequestHandler.hpp
+        ../../include/Nemu/Core/Web/RequestHandlers/WebRequestHandler.hpp
 
         ../../src/ControlHandlerRegistration.h
     }
@@ -63,6 +67,7 @@ library NemuCore : IshikoNetworking, IshikoTime, IshikoLogging, IshikoErrors, Bo
     sources
     {
         ../../src/Configuration.cpp
+        ../../src/ControlHandlerRegistration.cpp
         ../../src/Application.cpp
         ../../src/Applications.cpp
         ../../src/NemuErrorCategory.cpp
@@ -72,12 +77,13 @@ library NemuCore : IshikoNetworking, IshikoTime, IshikoLogging, IshikoErrors, Bo
         ../../src/Route.cpp
         ../../src/Routes.cpp
         ../../src/WebRequest.cpp
-        ../../src/WebRequestHandler.cpp
         ../../src/WebResponseBuilder.cpp
         ../../src/AccessLog.cpp
         ../../src/Views.cpp
         ../../src/TemplatingEngine.cpp
-
-        ../../src/ControlHandlerRegistration.cpp
+        ../../src/Web/RequestHandlers/FileSystemWebRequestHandler.cpp
+        ../../src/Web/RequestHandlers/FunctionWebRequestHandler.cpp
+        ../../src/Web/RequestHandlers/HardcodedWebRequestHandler.cpp
+        ../../src/Web/RequestHandlers/WebRequestHandler.cpp
     }
 }
