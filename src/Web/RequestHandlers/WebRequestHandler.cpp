@@ -4,7 +4,7 @@
     See https://github.com/nemu-cpp/core/blob/main/LICENSE.txt
 */
 
-#include "WebRequestHandler.hpp"
+#include "Web/RequestHandlers/WebRequestHandler.hpp"
 
 namespace Nemu
 {

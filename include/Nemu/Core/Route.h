@@ -8,7 +8,7 @@
 #define _NEMU_CPP_CORE_ROUTE_H_
 
 #include "WebRequest.hpp"
-#include "WebRequestHandler.hpp"
+#include "Web/RequestHandlers/WebRequestHandler.hpp"
 #include "WebResponseBuilder.hpp"
 #include <Ishiko/Logging.hpp>
 #include <string>

@@ -4,8 +4,8 @@
     See https://github.com/nemu-cpp/core/blob/main/LICENSE.txt
 */
 
-#ifndef _NEMU_CPP_CORE_WEBREQUESTHANDLER_HPP_
-#define _NEMU_CPP_CORE_WEBREQUESTHANDLER_HPP_
+#ifndef _NEMU_CPP_CORE_WEB_REQUESTHANDLERS_WEBREQUESTHANDLER_HPP_
+#define _NEMU_CPP_CORE_WEB_REQUESTHANDLERS_WEBREQUESTHANDLER_HPP_
 
 #include "WebRequest.hpp"
 #include "WebResponseBuilder.hpp"

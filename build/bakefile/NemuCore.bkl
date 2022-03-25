@@ -51,11 +51,13 @@ library NemuCore : IshikoNetworking, IshikoTime, IshikoLogging, IshikoErrors, Bo
         ../../include/Nemu/Core/Route.h
         ../../include/Nemu/Core/Routes.h
         ../../include/Nemu/Core/WebRequest.hpp
-        ../../include/Nemu/Core/WebRequestHandler.hpp
         ../../include/Nemu/Core/WebResponseBuilder.hpp
         ../../include/Nemu/Core/AccessLog.h
         ../../include/Nemu/Core/Views.h
         ../../include/Nemu/Core/TemplateEngine.hpp
+        ../../include/Nemu/Core/Web/RequestHandlers/FileSystemWebRequestHandler.hpp
+        ../../include/Nemu/Core/Web/RequestHandlers/HardcodedWebRequestHandler.hpp
+        ../../include/Nemu/Core/Web/RequestHandlers/WebRequestHandler.hpp
 
         ../../src/ControlHandlerRegistration.h
     }
@@ -63,6 +65,7 @@ library NemuCore : IshikoNetworking, IshikoTime, IshikoLogging, IshikoErrors, Bo
     sources
     {
         ../../src/Configuration.cpp
+        ../../src/ControlHandlerRegistration.cpp
         ../../src/Application.cpp
         ../../src/Applications.cpp
         ../../src/NemuErrorCategory.cpp
@@ -72,12 +75,12 @@ library NemuCore : IshikoNetworking, IshikoTime, IshikoLogging, IshikoErrors, Bo
         ../../src/Route.cpp
         ../../src/Routes.cpp
         ../../src/WebRequest.cpp
-        ../../src/WebRequestHandler.cpp
         ../../src/WebResponseBuilder.cpp
         ../../src/AccessLog.cpp
         ../../src/Views.cpp
         ../../src/TemplatingEngine.cpp
-
-        ../../src/ControlHandlerRegistration.cpp
+        ../../src/Web/RequestHandlers/FileSystemWebRequestHandler.cpp
+        ../../src/Web/RequestHandlers/HardcodedWebRequestHandler.cpp
+        ../../src/Web/RequestHandlers/WebRequestHandler.cpp
     }
 }
