@@ -7,9 +7,9 @@
 #ifndef _NEMU_CPP_CORE_ROUTE_H_
 #define _NEMU_CPP_CORE_ROUTE_H_
 
-#include "Logger.hpp"
-#include "WebRequest.h"
-#include "WebResponseBuilder.h"
+#include "WebRequest.hpp"
+#include "WebResponseBuilder.hpp"
+#include <Ishiko/Logging.hpp>
 #include <string>
 #include <memory>
 
@@ -28,7 +28,7 @@ public:
         time and retrieved with the Route::handlerData() accessor.
     */
     typedef void (*RequestHandler)(const WebRequest& request, WebResponseBuilder& response, void* handlerData,
-        Logger& logger);
+        Ishiko::Logger& logger);
 
     /// Constructor.
     /**
@@ -44,7 +44,7 @@ public:
     RequestHandler handler() const;
     void* handlerData() const;
 
-    void runHandler(const WebRequest& request, WebResponseBuilder& response, Logger& logger) const;
+    void runHandler(const WebRequest& request, WebResponseBuilder& response, Ishiko::Logger& logger) const;
 
 private:
     std::string m_path;

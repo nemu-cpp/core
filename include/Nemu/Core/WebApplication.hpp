@@ -12,6 +12,7 @@
 #include "Server.hpp"
 #include "Views.h"
 #include <Ishiko/Errors.hpp>
+#include <Ishiko/Logging.hpp>
 #include <vector>
 #include <memory>
 
@@ -23,8 +24,8 @@ class WebApplication : public Application
 {
 public:
     /// Constructor.
-    WebApplication(std::shared_ptr<Server> server, Logger& logger, Ishiko::Error& error);
-    WebApplication(std::shared_ptr<Server> server, Logger& logger, std::shared_ptr<Routes> routes,
+    WebApplication(std::shared_ptr<Server> server, Ishiko::Logger& logger, Ishiko::Error& error);
+    WebApplication(std::shared_ptr<Server> server, Ishiko::Logger& logger, std::shared_ptr<Routes> routes,
         Ishiko::Error& error);
 
     /// Returns the routes.
