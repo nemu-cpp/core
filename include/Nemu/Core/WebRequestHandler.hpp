@@ -7,4 +7,38 @@
 #ifndef _NEMU_CPP_CORE_WEBREQUESTHANDLER_HPP_
 #define _NEMU_CPP_CORE_WEBREQUESTHANDLER_HPP_
 
+#include "WebRequest.hpp"
+#include "WebResponseBuilder.hpp"
+#include <Ishiko/Logging.hpp>
+#include <memory>
+
+namespace Nemu
+{
+
+class WebRequestHandler
+{
+public:
+    // TODO: update comment
+    /// The type definition for the request handlers.
+    /**
+        @param request The request that was received from the client.
+        @param response This argument is used to build the response that will be returned to the client.
+        @param handlerData Additional data required by the handler. This data can be stored in the route at construction
+        time and retrieved with the Route::handlerData() accessor.
+    */
+    typedef void (*RequestHandler)(const WebRequest& request, WebResponseBuilder& response, void* handlerData,
+        Ishiko::Logger& logger);
+
+    WebRequestHandler(RequestHandler handler);
+    WebRequestHandler(RequestHandler handler, std::shared_ptr<void> handlerData);
+
+    void run(const WebRequest& request, WebResponseBuilder& response, Ishiko::Logger& logger) const;
+
+private:
+    RequestHandler m_handler;
+    std::shared_ptr<void> m_handlerData;
+};
+
+}
+
 #endif
