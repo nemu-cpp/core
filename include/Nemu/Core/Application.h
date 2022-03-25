@@ -7,8 +7,8 @@
 #ifndef _NEMU_CPP_CORE_APPLICATION_H_
 #define _NEMU_CPP_CORE_APPLICATION_H_
 
-#include "Logger.hpp"
 #include "Servers.h"
+#include <Ishiko/Logging.hpp>
 
 namespace Nemu
 {
@@ -83,7 +83,7 @@ public:
         observers.
         @param observer An observer.
     */
-    Application(Logger& logger);
+    Application(Ishiko::Logger& logger);
     /// Destructor.
     virtual ~Application();
 
@@ -121,7 +121,7 @@ private:
 #ifdef _WIN32
     std::unique_ptr<ControlHandlerRegistration> m_controlHandlerRegistration;
 #endif
-    Logger& m_logger;
+    Ishiko::Logger& m_logger;
     Servers m_servers;
     Observers m_observers;
 };
