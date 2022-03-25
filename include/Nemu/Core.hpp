@@ -14,7 +14,6 @@
 #include "Core/Configuration.h"
 #include "Core/ErrorCategory.h"
 #include "Core/linkoptions.hpp"
-#include "Core/Logger.hpp"
 #include "Core/Route.h"
 #include "Core/Routes.h"
 #include "Core/Server.hpp"
