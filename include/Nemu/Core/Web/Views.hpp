@@ -4,8 +4,8 @@
     See https://github.com/nemu-cpp/core/blob/main/LICENSE.txt
 */
 
-#ifndef _NEMU_CPP_CORE_VIEWS_H_
-#define _NEMU_CPP_CORE_VIEWS_H_
+#ifndef _NEMU_CPP_CORE_VIEWS_HPP_
+#define _NEMU_CPP_CORE_VIEWS_HPP_
 
 #include "TemplateEngine.hpp"
 #include <memory>

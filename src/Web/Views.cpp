@@ -4,7 +4,7 @@
     See https://github.com/nemu-cpp/core/blob/main/LICENSE.txt
 */
 
-#include "Views.h"
+#include "Web/Views.hpp"
 
 namespace Nemu
 {

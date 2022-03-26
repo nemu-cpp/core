@@ -4,8 +4,8 @@
     See https://github.com/nemu-cpp/core/blob/main/LICENSE.txt
 */
 
-#ifndef _NEMU_CPP_CORE_ROUTE_H_
-#define _NEMU_CPP_CORE_ROUTE_H_
+#ifndef _NEMU_CPP_CORE_ROUTE_HPP_
+#define _NEMU_CPP_CORE_ROUTE_HPP_
 
 #include "WebRequest.hpp"
 #include "Web/RequestHandlers/WebRequestHandler.hpp"
