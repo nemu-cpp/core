@@ -142,8 +142,5 @@
     <ClCompile Include="..\..\src\Web\RequestHandlers\HardcodedWebRequestHandler.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\Web\RequestHandlers\WebRequestHandler.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
 </Project>

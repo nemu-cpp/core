@@ -84,6 +84,5 @@ library NemuCore : IshikoNetworking, IshikoFileSystem, IshikoTime, IshikoLogging
         ../../src/Web/RequestHandlers/FileSystemWebRequestHandler.cpp
         ../../src/Web/RequestHandlers/FunctionWebRequestHandler.cpp
         ../../src/Web/RequestHandlers/HardcodedWebRequestHandler.cpp
-        ../../src/Web/RequestHandlers/WebRequestHandler.cpp
     }
 }

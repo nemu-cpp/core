@@ -168,7 +168,6 @@
     <ClCompile Include="..\..\src\Web\RequestHandlers\FileSystemWebRequestHandler.cpp" />
     <ClCompile Include="..\..\src\Web\RequestHandlers\FunctionWebRequestHandler.cpp" />
     <ClCompile Include="..\..\src\Web\RequestHandlers\HardcodedWebRequestHandler.cpp" />
-    <ClCompile Include="..\..\src\Web\RequestHandlers\WebRequestHandler.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\include\Nemu\Core.hpp" />
