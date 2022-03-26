@@ -8,11 +8,10 @@
 #include "Helpers/TestWebRequest.hpp"
 #include "Helpers/TestWebResponseBuilder.hpp"
 #include "Nemu/Core/Web/RequestHandlers/FunctionWebRequestHandler.hpp"
-#include <iostream>
+#include <Ishiko/Logging.hpp>
 
 using namespace Ishiko;
 using namespace Nemu;
-using namespace std;
 
 FunctionWebRequestHandlerTests::FunctionWebRequestHandlerTests(const TestNumber& number, const TestContext& context)
     : TestSequence(number, "FunctionWebRequestHandler tests", context)
@@ -46,9 +45,7 @@ void FunctionWebRequestHandlerTests::RunTest1(Test& test)
     TestWebRequest request("/");
     Views views;
     TestWebResponseBuilder responseBuilder(views);
-
-    // TODO: null log
-    StreamLoggingSink sink(cout);
+    NullLoggingSink sink;
     Logger log(sink);
 
     requestHandler.run(request, responseBuilder, log);

@@ -4,7 +4,7 @@
     See https://github.com/nemu-cpp/core/blob/main/LICENSE.txt
 */
 
-#include "Routes.h"
+#include "Web/Routes.hpp"
 #include "Web/RequestHandlers/HardcodedWebRequestHandler.hpp"
 
 using namespace Ishiko;

@@ -8,9 +8,9 @@
 #define _NEMU_CPP_CORE_WEBAPPLICATION_HPP_
 
 #include "Application.h"
-#include "Routes.h"
 #include "Server.hpp"
-#include "Views.h"
+#include "Web/Routes.hpp"
+#include "Web/Views.hpp"
 #include <Ishiko/Errors.hpp>
 #include <Ishiko/Logging.hpp>
 #include <vector>
