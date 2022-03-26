@@ -7,9 +7,9 @@
 #ifndef _NEMU_CPP_CORE_ROUTE_HPP_
 #define _NEMU_CPP_CORE_ROUTE_HPP_
 
-#include "WebRequest.hpp"
-#include "Web/RequestHandlers/WebRequestHandler.hpp"
-#include "WebResponseBuilder.hpp"
+#include "../WebRequest.hpp"
+#include "../WebResponseBuilder.hpp"
+#include "RequestHandlers/WebRequestHandler.hpp"
 #include <Ishiko/Logging.hpp>
 #include <memory>
 #include <string>
