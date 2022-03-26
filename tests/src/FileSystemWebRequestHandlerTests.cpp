@@ -8,12 +8,11 @@
 #include "Helpers/TestWebRequest.hpp"
 #include "Helpers/TestWebResponseBuilder.hpp"
 #include "Nemu/Core/Web/RequestHandlers/FileSystemWebRequestHandler.hpp"
-#include <iostream>
+#include <Ishiko/Logging.hpp>
 
 using namespace boost::filesystem;
 using namespace Ishiko;
 using namespace Nemu;
-using namespace std;
 
 FileSystemWebRequestHandlerTests::FileSystemWebRequestHandlerTests(const TestNumber& number,
     const TestContext& context)
@@ -42,9 +41,7 @@ void FileSystemWebRequestHandlerTests::RunTest1(FileComparisonTest& test)
     TestWebRequest request("/");
     Views views;
     TestWebResponseBuilder responseBuilder(views);
-
-    // TODO: null log
-    StreamLoggingSink sink(cout);
+    NullLoggingSink sink;
     Logger log(sink);
 
     requestHandler.run(request, responseBuilder, log);
