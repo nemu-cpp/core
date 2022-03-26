@@ -7,7 +7,7 @@
 #ifndef _NEMU_CPP_CORE_APPLICATION_H_
 #define _NEMU_CPP_CORE_APPLICATION_H_
 
-#include "Servers.h"
+#include "Servers.hpp"
 #include <Ishiko/Logging.hpp>
 
 namespace Nemu
@@ -94,7 +94,7 @@ public:
         On Windows it will also register a control handler for the Control-C event which will stop all applications
         when triggered. Once the applications are stopped the control handler is unregistered.
     */
-    void start();
+    void run();
     /// Stops the application.
     /**
         If the start function was blocking it will return after this function is called. The function will stop all

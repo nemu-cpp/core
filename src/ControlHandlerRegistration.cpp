@@ -1,5 +1,5 @@
 /*
-    Copyright (c) 2019-2021 Xavier Leclercq
+    Copyright (c) 2019-2022 Xavier Leclercq
     Released under the MIT License
     See https://github.com/nemu-cpp/core/blob/main/LICENSE.txt
 */
@@ -7,7 +7,7 @@
 #include "ControlHandlerRegistration.h"
 
 #ifdef _WIN32
-#include "Applications.h"
+#include "Applications.hpp"
 #include <windows.h>
 
 namespace Nemu

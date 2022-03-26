@@ -174,10 +174,10 @@
     <ClInclude Include="..\..\include\Nemu\Core\compileoptions.hpp" />
     <ClInclude Include="..\..\include\Nemu\Core\Configuration.h" />
     <ClInclude Include="..\..\include\Nemu\Core\Application.h" />
-    <ClInclude Include="..\..\include\Nemu\Core\Applications.h" />
+    <ClInclude Include="..\..\include\Nemu\Core\Applications.hpp" />
     <ClInclude Include="..\..\include\Nemu\Core\NemuErrorCategory.hpp" />
     <ClInclude Include="..\..\include\Nemu\Core\Server.hpp" />
-    <ClInclude Include="..\..\include\Nemu\Core\Servers.h" />
+    <ClInclude Include="..\..\include\Nemu\Core\Servers.hpp" />
     <ClInclude Include="..\..\include\Nemu\Core\linkoptions.hpp" />
     <ClInclude Include="..\..\include\Nemu\Core\LoggingMacros.hpp" />
     <ClInclude Include="..\..\include\Nemu\Core\WebApplication.hpp" />

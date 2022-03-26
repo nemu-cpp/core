@@ -5,7 +5,7 @@
 */
 
 #include "Application.h"
-#include "Applications.h"
+#include "Applications.hpp"
 #ifdef _WIN32
 #include "ControlHandlerRegistration.h"
 #endif
@@ -107,7 +107,7 @@ Application::~Application()
     Applications::unset(this);
 }
 
-void Application::start()
+void Application::run()
 {
     // The "logger" alias is what is used by the MENU_LOG_lvl macros
     Logger& logger = m_logger;
