@@ -107,7 +107,7 @@ Application::~Application()
     Applications::unset(this);
 }
 
-void Application::start()
+void Application::run()
 {
     // The "logger" alias is what is used by the MENU_LOG_lvl macros
     Logger& logger = m_logger;
