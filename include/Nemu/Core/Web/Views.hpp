@@ -7,7 +7,7 @@
 #ifndef _NEMU_CPP_CORE_VIEWS_HPP_
 #define _NEMU_CPP_CORE_VIEWS_HPP_
 
-#include "TemplateEngine.hpp"
+#include "../TemplateEngine.hpp"
 #include <memory>
 
 namespace Nemu
