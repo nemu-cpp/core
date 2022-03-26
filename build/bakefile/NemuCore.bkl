@@ -42,10 +42,10 @@ library NemuCore : IshikoNetworking, IshikoFileSystem, IshikoTime, IshikoLogging
         ../../include/Nemu/Core/compileoptions.hpp
         ../../include/Nemu/Core/Configuration.h
         ../../include/Nemu/Core/Application.h
-        ../../include/Nemu/Core/Applications.h
+        ../../include/Nemu/Core/Applications.hpp
         ../../include/Nemu/Core/NemuErrorCategory.hpp
         ../../include/Nemu/Core/Server.hpp
-        ../../include/Nemu/Core/Servers.h
+        ../../include/Nemu/Core/Servers.hpp
         ../../include/Nemu/Core/linkoptions.hpp
         ../../include/Nemu/Core/LoggingMacros.hpp
         ../../include/Nemu/Core/WebApplication.hpp

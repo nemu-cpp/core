@@ -29,7 +29,7 @@
     <ClInclude Include="..\..\include\Nemu\Core\Application.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\include\Nemu\Core\Applications.h">
+    <ClInclude Include="..\..\include\Nemu\Core\Applications.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\include\Nemu\Core\NemuErrorCategory.hpp">
@@ -38,7 +38,7 @@
     <ClInclude Include="..\..\include\Nemu\Core\Server.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\include\Nemu\Core\Servers.h">
+    <ClInclude Include="..\..\include\Nemu\Core\Servers.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\include\Nemu\Core\linkoptions.hpp">

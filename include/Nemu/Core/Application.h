@@ -7,7 +7,7 @@
 #ifndef _NEMU_CPP_CORE_APPLICATION_H_
 #define _NEMU_CPP_CORE_APPLICATION_H_
 
-#include "Servers.h"
+#include "Servers.hpp"
 #include <Ishiko/Logging.hpp>
 
 namespace Nemu

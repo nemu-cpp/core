@@ -5,7 +5,7 @@
 */
 
 #include "Application.h"
-#include "Applications.h"
+#include "Applications.hpp"
 #ifdef _WIN32
 #include "ControlHandlerRegistration.h"
 #endif
