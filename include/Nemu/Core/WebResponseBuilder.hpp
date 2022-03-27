@@ -18,7 +18,7 @@ namespace Nemu
 class WebResponseBuilder
 {
 public:
-    WebResponseBuilder(const Views& views);
+    WebResponseBuilder();
 
     virtual void setStatus(unsigned int status) = 0;
     virtual void setDateHeader(const Ishiko::UTCTime& time) = 0;
@@ -35,8 +35,8 @@ public:
 
     void state();
 
-private:
-    const Views& m_views;
+public:
+    const Views* m_views;
 };
 
 }

@@ -34,6 +34,18 @@ public:
     Views& views();
 
 private:
+    class ConnectionHandler : public Server::ConnectionHandler
+    {
+    public:
+        ConnectionHandler(WebApplication& owner);
+
+        void onConnection(const WebRequest& request, WebResponseBuilder& responseBuilder) override;
+
+    private:
+        WebApplication& m_owner;
+    };
+
+    ConnectionHandler m_connectionHandler;
     std::shared_ptr<Routes> m_routes;
     Views m_views;
 };

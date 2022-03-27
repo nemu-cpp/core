@@ -9,14 +9,14 @@
 namespace Nemu
 {
 
-WebResponseBuilder::WebResponseBuilder(const Views& views)
-    : m_views(views)
+WebResponseBuilder::WebResponseBuilder()
+    : m_views(nullptr)
 {
 }
 
 void WebResponseBuilder::view(const std::string& viewName)
 {
-    body() = m_views.engine().render();
+    body() = m_views->engine().render();
 }
 
 void WebResponseBuilder::redirect()
