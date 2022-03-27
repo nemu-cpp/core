@@ -107,6 +107,7 @@ void Server::Observers::removeDeletedObservers()
 }
 
 Server::Server(std::shared_ptr<Observer> observer)
+    : m_connectionHandler(nullptr)
 {
     m_observers.add(observer);
 }

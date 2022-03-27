@@ -33,8 +33,7 @@ void HardcodedWebRequestHandlerTests::RunTest1(Test& test)
     HardcodedWebRequestHandler requestHandler(200, "body");
 
     TestWebRequest request("/");
-    Views views;
-    TestWebResponseBuilder responseBuilder(views);
+    TestWebResponseBuilder responseBuilder;
     NullLoggingSink sink;
     Logger log(sink);
 

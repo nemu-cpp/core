@@ -15,7 +15,7 @@
 class TestWebResponseBuilder : public Nemu::WebResponseBuilder
 {
 public:
-    TestWebResponseBuilder(const Nemu::Views& views);
+    TestWebResponseBuilder();
 
     void setStatus(unsigned int status) override;
     void setDateHeader(const Ishiko::UTCTime& time) override;

@@ -43,8 +43,7 @@ void FunctionWebRequestHandlerTests::RunTest1(Test& test)
         });
 
     TestWebRequest request("/");
-    Views views;
-    TestWebResponseBuilder responseBuilder(views);
+    TestWebResponseBuilder responseBuilder;
     NullLoggingSink sink;
     Logger log(sink);
 
