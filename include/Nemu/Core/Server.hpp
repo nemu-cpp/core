@@ -20,6 +20,14 @@ namespace Nemu
 class Server
 {
 public:
+    class ConnectionHandler
+    {
+    public:
+        // TODO: this references web server stuff so it means the server is not generic but I don't know how to avoid
+        // this.
+        virtual void onConnection(const WebRequest& request, WebResponseBuilder& responseBuilder) = 0;
+    };
+
     /// The interface that needs to be implemented by the observers of the Server class.
     class Observer
     {
@@ -118,9 +126,7 @@ public:
     Observers& observers();
 
 public:
-    // TOOD: hack, the server shouldn't have knowledge of routes. The web app should be the one registering a handler
-    // that handles the routes.
-    Routes* m_routes;
+    ConnectionHandler* m_connectionHandler;
     Ishiko::Logger* m_logger;
 
 private:

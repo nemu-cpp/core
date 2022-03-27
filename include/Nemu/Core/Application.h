@@ -121,7 +121,9 @@ private:
 #ifdef _WIN32
     std::unique_ptr<ControlHandlerRegistration> m_controlHandlerRegistration;
 #endif
-    Ishiko::Logger& m_logger;
+protected:
+    Ishiko::Logger& m_logger; // TODO: avoid protected
+private:
     Servers m_servers;
     Observers m_observers;
 };

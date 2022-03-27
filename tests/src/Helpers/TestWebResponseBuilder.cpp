@@ -10,8 +10,8 @@ using namespace Ishiko;
 using namespace Nemu;
 using namespace std;
 
-TestWebResponseBuilder::TestWebResponseBuilder(const Views& views)
-    : WebResponseBuilder(views), m_statusCode(0)
+TestWebResponseBuilder::TestWebResponseBuilder()
+    : m_statusCode(0)
 {
 }
 
