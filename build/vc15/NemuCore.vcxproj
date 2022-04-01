@@ -161,9 +161,6 @@
     <ClCompile Include="..\..\src\WebApplication.cpp" />
     <ClCompile Include="..\..\src\AccessLog.cpp" />
     <ClCompile Include="..\..\src\TemplatingEngine.cpp" />
-    <ClCompile Include="..\..\src\Web\Route.cpp" />
-    <ClCompile Include="..\..\src\Web\Routes.cpp" />
-    <ClCompile Include="..\..\src\Web\Views.cpp" />
     <ClCompile Include="..\..\src\Web\RequestHandlers\FileSystemWebRequestHandler.cpp" />
     <ClCompile Include="..\..\src\Web\RequestHandlers\FunctionWebRequestHandler.cpp" />
     <ClCompile Include="..\..\src\Web\RequestHandlers\HardcodedWebRequestHandler.cpp" />
@@ -183,9 +180,6 @@
     <ClInclude Include="..\..\include\Nemu\Core\WebApplication.hpp" />
     <ClInclude Include="..\..\include\Nemu\Core\AccessLog.h" />
     <ClInclude Include="..\..\include\Nemu\Core\TemplateEngine.hpp" />
-    <ClInclude Include="..\..\include\Nemu\Core\Web\Route.hpp" />
-    <ClInclude Include="..\..\include\Nemu\Core\Web\Routes.hpp" />
-    <ClInclude Include="..\..\include\Nemu\Core\Web\Views.hpp" />
     <ClInclude Include="..\..\include\Nemu\Core\Web\RequestHandlers\FileSystemWebRequestHandler.hpp" />
     <ClInclude Include="..\..\include\Nemu\Core\Web\RequestHandlers\FunctionWebRequestHandler.hpp" />
     <ClInclude Include="..\..\include\Nemu\Core\Web\RequestHandlers\HardcodedWebRequestHandler.hpp" />
