@@ -95,8 +95,8 @@ ISHIKO_CPP_TIME_ROOT ?= $(ISHIKO_CPP)/time
 
 all: ../bakefile/../../lib/lib$(if $(call _equal,$(config),Debug),NemuCore-d,NemuCore).a
 
-../bakefile/../../lib/lib$(if $(call _equal,$(config),Debug),NemuCore-d,NemuCore).a: $(_builddir)NemuCore_Configuration.o $(_builddir)NemuCore_ControlHandlerRegistration.o $(_builddir)NemuCore_Connection.o $(_builddir)NemuCore_Application.o $(_builddir)NemuCore_Applications.o $(_builddir)NemuCore_NemuErrorCategory.o $(_builddir)NemuCore_Server.o $(_builddir)NemuCore_Servers.o $(_builddir)NemuCore_AccessLog.o $(_builddir)NemuCore_FileSystemWebRequestHandler.o $(_builddir)NemuCore_FunctionWebRequestHandler.o $(_builddir)NemuCore_HardcodedWebRequestHandler.o
-	$(AR) rc $@ $(_builddir)NemuCore_Configuration.o $(_builddir)NemuCore_ControlHandlerRegistration.o $(_builddir)NemuCore_Connection.o $(_builddir)NemuCore_Application.o $(_builddir)NemuCore_Applications.o $(_builddir)NemuCore_NemuErrorCategory.o $(_builddir)NemuCore_Server.o $(_builddir)NemuCore_Servers.o $(_builddir)NemuCore_AccessLog.o $(_builddir)NemuCore_FileSystemWebRequestHandler.o $(_builddir)NemuCore_FunctionWebRequestHandler.o $(_builddir)NemuCore_HardcodedWebRequestHandler.o
+../bakefile/../../lib/lib$(if $(call _equal,$(config),Debug),NemuCore-d,NemuCore).a: $(_builddir)NemuCore_Configuration.o $(_builddir)NemuCore_ControlHandlerRegistration.o $(_builddir)NemuCore_Connection.o $(_builddir)NemuCore_Application.o $(_builddir)NemuCore_Applications.o $(_builddir)NemuCore_NemuErrorCategory.o $(_builddir)NemuCore_Server.o $(_builddir)NemuCore_Servers.o $(_builddir)NemuCore_AccessLog.o
+	$(AR) rc $@ $(_builddir)NemuCore_Configuration.o $(_builddir)NemuCore_ControlHandlerRegistration.o $(_builddir)NemuCore_Connection.o $(_builddir)NemuCore_Application.o $(_builddir)NemuCore_Applications.o $(_builddir)NemuCore_NemuErrorCategory.o $(_builddir)NemuCore_Server.o $(_builddir)NemuCore_Servers.o $(_builddir)NemuCore_AccessLog.o
 	$(RANLIB) $@
 
 $(_builddir)NemuCore_Configuration.o: ../../src/Configuration.cpp
@@ -125,15 +125,6 @@ $(_builddir)NemuCore_Servers.o: ../../src/Servers.cpp
 
 $(_builddir)NemuCore_AccessLog.o: ../../src/AccessLog.cpp
 	$(CXX) -c -o $@ $(CPPFLAGS) $(CXXFLAGS) -MD -MP -fPIC -DPIC -pthread -I$(ISHIKO_CPP_ERRORS_ROOT)/include -I$(ISHIKO_CPP_BASEPLATFORM_ROOT)/include -I$(ISHIKO_CPP_TEXT_ROOT)/include -I$(ISHIKO_CPP_NETWORKING_ROOT)/include -I$(ISHIKO_CPP_BOOST_ROOT)/include -I$(ISHIKO_CPP_FILESYSTEM_ROOT)/include -I$(ISHIKO_CPP_FMT_ROOT)/include -I$(ISHIKO_CPP_TIME_ROOT)/include -I$(ISHIKO_CPP_LOGGING_ROOT)/include -I../../include/Nemu/Core -std=c++11 ../../src/AccessLog.cpp
-
-$(_builddir)NemuCore_FileSystemWebRequestHandler.o: ../../src/Web/RequestHandlers/FileSystemWebRequestHandler.cpp
-	$(CXX) -c -o $@ $(CPPFLAGS) $(CXXFLAGS) -MD -MP -fPIC -DPIC -pthread -I$(ISHIKO_CPP_ERRORS_ROOT)/include -I$(ISHIKO_CPP_BASEPLATFORM_ROOT)/include -I$(ISHIKO_CPP_TEXT_ROOT)/include -I$(ISHIKO_CPP_NETWORKING_ROOT)/include -I$(ISHIKO_CPP_BOOST_ROOT)/include -I$(ISHIKO_CPP_FILESYSTEM_ROOT)/include -I$(ISHIKO_CPP_FMT_ROOT)/include -I$(ISHIKO_CPP_TIME_ROOT)/include -I$(ISHIKO_CPP_LOGGING_ROOT)/include -I../../include/Nemu/Core -std=c++11 ../../src/Web/RequestHandlers/FileSystemWebRequestHandler.cpp
-
-$(_builddir)NemuCore_FunctionWebRequestHandler.o: ../../src/Web/RequestHandlers/FunctionWebRequestHandler.cpp
-	$(CXX) -c -o $@ $(CPPFLAGS) $(CXXFLAGS) -MD -MP -fPIC -DPIC -pthread -I$(ISHIKO_CPP_ERRORS_ROOT)/include -I$(ISHIKO_CPP_BASEPLATFORM_ROOT)/include -I$(ISHIKO_CPP_TEXT_ROOT)/include -I$(ISHIKO_CPP_NETWORKING_ROOT)/include -I$(ISHIKO_CPP_BOOST_ROOT)/include -I$(ISHIKO_CPP_FILESYSTEM_ROOT)/include -I$(ISHIKO_CPP_FMT_ROOT)/include -I$(ISHIKO_CPP_TIME_ROOT)/include -I$(ISHIKO_CPP_LOGGING_ROOT)/include -I../../include/Nemu/Core -std=c++11 ../../src/Web/RequestHandlers/FunctionWebRequestHandler.cpp
-
-$(_builddir)NemuCore_HardcodedWebRequestHandler.o: ../../src/Web/RequestHandlers/HardcodedWebRequestHandler.cpp
-	$(CXX) -c -o $@ $(CPPFLAGS) $(CXXFLAGS) -MD -MP -fPIC -DPIC -pthread -I$(ISHIKO_CPP_ERRORS_ROOT)/include -I$(ISHIKO_CPP_BASEPLATFORM_ROOT)/include -I$(ISHIKO_CPP_TEXT_ROOT)/include -I$(ISHIKO_CPP_NETWORKING_ROOT)/include -I$(ISHIKO_CPP_BOOST_ROOT)/include -I$(ISHIKO_CPP_FILESYSTEM_ROOT)/include -I$(ISHIKO_CPP_FMT_ROOT)/include -I$(ISHIKO_CPP_TIME_ROOT)/include -I$(ISHIKO_CPP_LOGGING_ROOT)/include -I../../include/Nemu/Core -std=c++11 ../../src/Web/RequestHandlers/HardcodedWebRequestHandler.cpp
 
 clean:
 	rm -f $(_builddir)*.o

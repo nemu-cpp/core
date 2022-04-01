@@ -159,9 +159,6 @@
     <ClCompile Include="..\..\src\Server.cpp" />
     <ClCompile Include="..\..\src\Servers.cpp" />
     <ClCompile Include="..\..\src\AccessLog.cpp" />
-    <ClCompile Include="..\..\src\Web\RequestHandlers\FileSystemWebRequestHandler.cpp" />
-    <ClCompile Include="..\..\src\Web\RequestHandlers\FunctionWebRequestHandler.cpp" />
-    <ClCompile Include="..\..\src\Web\RequestHandlers\HardcodedWebRequestHandler.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\include\Nemu\Core.hpp" />
@@ -176,10 +173,6 @@
     <ClInclude Include="..\..\include\Nemu\Core\linkoptions.hpp" />
     <ClInclude Include="..\..\include\Nemu\Core\LoggingMacros.hpp" />
     <ClInclude Include="..\..\include\Nemu\Core\AccessLog.h" />
-    <ClInclude Include="..\..\include\Nemu\Core\Web\RequestHandlers\FileSystemWebRequestHandler.hpp" />
-    <ClInclude Include="..\..\include\Nemu\Core\Web\RequestHandlers\FunctionWebRequestHandler.hpp" />
-    <ClInclude Include="..\..\include\Nemu\Core\Web\RequestHandlers\HardcodedWebRequestHandler.hpp" />
-    <ClInclude Include="..\..\include\Nemu\Core\Web\RequestHandlers\WebRequestHandler.hpp" />
     <ClInclude Include="..\..\src\ControlHandlerRegistration.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

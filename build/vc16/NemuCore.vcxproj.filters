@@ -53,18 +53,6 @@
     <ClInclude Include="..\..\include\Nemu\Core\AccessLog.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\include\Nemu\Core\Web\RequestHandlers\FileSystemWebRequestHandler.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\include\Nemu\Core\Web\RequestHandlers\FunctionWebRequestHandler.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\include\Nemu\Core\Web\RequestHandlers\HardcodedWebRequestHandler.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\include\Nemu\Core\Web\RequestHandlers\WebRequestHandler.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\src\ControlHandlerRegistration.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -95,15 +83,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\src\AccessLog.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\Web\RequestHandlers\FileSystemWebRequestHandler.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\Web\RequestHandlers\FunctionWebRequestHandler.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\Web\RequestHandlers\HardcodedWebRequestHandler.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
