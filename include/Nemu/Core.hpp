@@ -12,6 +12,7 @@
 #include "Core/Applications.hpp"
 #include "Core/compileoptions.hpp"
 #include "Core/Configuration.h"
+#include "Core/Connection.hpp"
 #include "Core/NemuErrorCategory.hpp"
 #include "Core/linkoptions.hpp"
 #include "Core/Server.hpp"
