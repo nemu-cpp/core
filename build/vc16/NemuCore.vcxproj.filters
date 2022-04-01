@@ -53,12 +53,6 @@
     <ClInclude Include="..\..\include\Nemu\Core\WebApplication.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\include\Nemu\Core\WebRequest.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\include\Nemu\Core\WebResponseBuilder.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\include\Nemu\Core\AccessLog.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -72,9 +66,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\include\Nemu\Core\Web\Views.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\include\Nemu\Core\Web\WebServer.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\include\Nemu\Core\Web\RequestHandlers\FileSystemWebRequestHandler.hpp">
@@ -121,12 +112,6 @@
     <ClCompile Include="..\..\src\WebApplication.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\WebRequest.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\WebResponseBuilder.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\src\AccessLog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -140,9 +125,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\src\Web\Views.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\Web\WebServer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\src\Web\RequestHandlers\FileSystemWebRequestHandler.cpp">
