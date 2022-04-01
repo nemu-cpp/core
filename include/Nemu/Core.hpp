@@ -17,7 +17,6 @@
 #include "Core/linkoptions.hpp"
 #include "Core/Server.hpp"
 #include "Core/Servers.hpp"
-#include "Core/WebApplication.hpp"
 #include "Core/Web/RequestHandlers/FileSystemWebRequestHandler.hpp"
 #include "Core/Web/RequestHandlers/FunctionWebRequestHandler.hpp"
 #include "Core/Web/RequestHandlers/HardcodedWebRequestHandler.hpp"

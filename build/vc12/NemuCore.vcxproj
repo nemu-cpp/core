@@ -158,7 +158,6 @@
     <ClCompile Include="..\..\src\NemuErrorCategory.cpp" />
     <ClCompile Include="..\..\src\Server.cpp" />
     <ClCompile Include="..\..\src\Servers.cpp" />
-    <ClCompile Include="..\..\src\WebApplication.cpp" />
     <ClCompile Include="..\..\src\AccessLog.cpp" />
     <ClCompile Include="..\..\src\Web\RequestHandlers\FileSystemWebRequestHandler.cpp" />
     <ClCompile Include="..\..\src\Web\RequestHandlers\FunctionWebRequestHandler.cpp" />
@@ -176,7 +175,6 @@
     <ClInclude Include="..\..\include\Nemu\Core\Servers.hpp" />
     <ClInclude Include="..\..\include\Nemu\Core\linkoptions.hpp" />
     <ClInclude Include="..\..\include\Nemu\Core\LoggingMacros.hpp" />
-    <ClInclude Include="..\..\include\Nemu\Core\WebApplication.hpp" />
     <ClInclude Include="..\..\include\Nemu\Core\AccessLog.h" />
     <ClInclude Include="..\..\include\Nemu\Core\Web\RequestHandlers\FileSystemWebRequestHandler.hpp" />
     <ClInclude Include="..\..\include\Nemu\Core\Web\RequestHandlers\FunctionWebRequestHandler.hpp" />

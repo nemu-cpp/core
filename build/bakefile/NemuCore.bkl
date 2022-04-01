@@ -49,7 +49,6 @@ library NemuCore : IshikoNetworking, IshikoFileSystem, IshikoTime, IshikoLogging
         ../../include/Nemu/Core/Servers.hpp
         ../../include/Nemu/Core/linkoptions.hpp
         ../../include/Nemu/Core/LoggingMacros.hpp
-        ../../include/Nemu/Core/WebApplication.hpp
         ../../include/Nemu/Core/AccessLog.h
         ../../include/Nemu/Core/Web/RequestHandlers/FileSystemWebRequestHandler.hpp
         ../../include/Nemu/Core/Web/RequestHandlers/FunctionWebRequestHandler.hpp
@@ -69,7 +68,6 @@ library NemuCore : IshikoNetworking, IshikoFileSystem, IshikoTime, IshikoLogging
         ../../src/NemuErrorCategory.cpp
         ../../src/Server.cpp
         ../../src/Servers.cpp
-        ../../src/WebApplication.cpp
         ../../src/AccessLog.cpp
         ../../src/Web/RequestHandlers/FileSystemWebRequestHandler.cpp
         ../../src/Web/RequestHandlers/FunctionWebRequestHandler.cpp
