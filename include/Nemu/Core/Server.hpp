@@ -7,6 +7,7 @@
 #ifndef _NEMU_CPP_CORE_SERVER_HPP_
 #define _NEMU_CPP_CORE_SERVER_HPP_
 
+#include "Connection.hpp"
 #include <Ishiko/Logging.hpp>
 #include <vector>
 #include <string>
@@ -24,7 +25,7 @@ public:
     public:
         // TODO: this references web server stuff so it means the server is not generic but I don't know how to avoid
         // this.
-        virtual void onConnection(/*const WebRequest& request, WebResponseBuilder& responseBuilder*/) = 0;
+        virtual void onConnection(Connection& connection) = 0;
     };
 
     /// The interface that needs to be implemented by the observers of the Server class.
