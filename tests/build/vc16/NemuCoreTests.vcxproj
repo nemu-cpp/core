@@ -158,23 +158,9 @@
   <ItemGroup>
     <ClCompile Include="..\..\src\main.cpp" />
     <ClCompile Include="..\..\src\ConfigurationTests.cpp" />
-    <ClCompile Include="..\..\src\FileSystemWebRequestHandlerTests.cpp" />
-    <ClCompile Include="..\..\src\FunctionWebRequestHandlerTests.cpp" />
-    <ClCompile Include="..\..\src\HardcodedWebRequestHandlerTests.cpp" />
-    <ClCompile Include="..\..\src\RouteTests.cpp" />
-    <ClCompile Include="..\..\src\RoutesTests.cpp" />
-    <ClCompile Include="..\..\src\Helpers\TestWebRequest.cpp" />
-    <ClCompile Include="..\..\src\Helpers\TestWebResponseBuilder.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\ConfigurationTests.h" />
-    <ClInclude Include="..\..\src\FileSystemWebRequestHandlerTests.hpp" />
-    <ClInclude Include="..\..\src\FunctionWebRequestHandlerTests.hpp" />
-    <ClInclude Include="..\..\src\HardcodedWebRequestHandlerTests.hpp" />
-    <ClInclude Include="..\..\src\RouteTests.h" />
-    <ClInclude Include="..\..\src\RoutesTests.h" />
-    <ClInclude Include="..\..\src\Helpers\TestWebRequest.hpp" />
-    <ClInclude Include="..\..\src\Helpers\TestWebResponseBuilder.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -152,27 +152,19 @@
   <ItemGroup>
     <ClCompile Include="..\..\src\Configuration.cpp" />
     <ClCompile Include="..\..\src\ControlHandlerRegistration.cpp" />
+    <ClCompile Include="..\..\src\Connection.cpp" />
     <ClCompile Include="..\..\src\Application.cpp" />
     <ClCompile Include="..\..\src\Applications.cpp" />
     <ClCompile Include="..\..\src\NemuErrorCategory.cpp" />
     <ClCompile Include="..\..\src\Server.cpp" />
     <ClCompile Include="..\..\src\Servers.cpp" />
-    <ClCompile Include="..\..\src\WebApplication.cpp" />
-    <ClCompile Include="..\..\src\WebRequest.cpp" />
-    <ClCompile Include="..\..\src\WebResponseBuilder.cpp" />
     <ClCompile Include="..\..\src\AccessLog.cpp" />
-    <ClCompile Include="..\..\src\TemplatingEngine.cpp" />
-    <ClCompile Include="..\..\src\Web\Route.cpp" />
-    <ClCompile Include="..\..\src\Web\Routes.cpp" />
-    <ClCompile Include="..\..\src\Web\Views.cpp" />
-    <ClCompile Include="..\..\src\Web\RequestHandlers\FileSystemWebRequestHandler.cpp" />
-    <ClCompile Include="..\..\src\Web\RequestHandlers\FunctionWebRequestHandler.cpp" />
-    <ClCompile Include="..\..\src\Web\RequestHandlers\HardcodedWebRequestHandler.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\include\Nemu\Core.hpp" />
     <ClInclude Include="..\..\include\Nemu\Core\compileoptions.hpp" />
     <ClInclude Include="..\..\include\Nemu\Core\Configuration.h" />
+    <ClInclude Include="..\..\include\Nemu\Core\Connection.hpp" />
     <ClInclude Include="..\..\include\Nemu\Core\Application.h" />
     <ClInclude Include="..\..\include\Nemu\Core\Applications.hpp" />
     <ClInclude Include="..\..\include\Nemu\Core\NemuErrorCategory.hpp" />
@@ -180,18 +172,7 @@
     <ClInclude Include="..\..\include\Nemu\Core\Servers.hpp" />
     <ClInclude Include="..\..\include\Nemu\Core\linkoptions.hpp" />
     <ClInclude Include="..\..\include\Nemu\Core\LoggingMacros.hpp" />
-    <ClInclude Include="..\..\include\Nemu\Core\WebApplication.hpp" />
-    <ClInclude Include="..\..\include\Nemu\Core\WebRequest.hpp" />
-    <ClInclude Include="..\..\include\Nemu\Core\WebResponseBuilder.hpp" />
     <ClInclude Include="..\..\include\Nemu\Core\AccessLog.h" />
-    <ClInclude Include="..\..\include\Nemu\Core\TemplateEngine.hpp" />
-    <ClInclude Include="..\..\include\Nemu\Core\Web\Route.hpp" />
-    <ClInclude Include="..\..\include\Nemu\Core\Web\Routes.hpp" />
-    <ClInclude Include="..\..\include\Nemu\Core\Web\Views.hpp" />
-    <ClInclude Include="..\..\include\Nemu\Core\Web\RequestHandlers\FileSystemWebRequestHandler.hpp" />
-    <ClInclude Include="..\..\include\Nemu\Core\Web\RequestHandlers\FunctionWebRequestHandler.hpp" />
-    <ClInclude Include="..\..\include\Nemu\Core\Web\RequestHandlers\HardcodedWebRequestHandler.hpp" />
-    <ClInclude Include="..\..\include\Nemu\Core\Web\RequestHandlers\WebRequestHandler.hpp" />
     <ClInclude Include="..\..\src\ControlHandlerRegistration.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

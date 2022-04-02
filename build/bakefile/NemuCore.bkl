@@ -41,6 +41,7 @@ library NemuCore : IshikoNetworking, IshikoFileSystem, IshikoTime, IshikoLogging
         ../../include/Nemu/Core.hpp
         ../../include/Nemu/Core/compileoptions.hpp
         ../../include/Nemu/Core/Configuration.h
+        ../../include/Nemu/Core/Connection.hpp
         ../../include/Nemu/Core/Application.h
         ../../include/Nemu/Core/Applications.hpp
         ../../include/Nemu/Core/NemuErrorCategory.hpp
@@ -48,19 +49,7 @@ library NemuCore : IshikoNetworking, IshikoFileSystem, IshikoTime, IshikoLogging
         ../../include/Nemu/Core/Servers.hpp
         ../../include/Nemu/Core/linkoptions.hpp
         ../../include/Nemu/Core/LoggingMacros.hpp
-        ../../include/Nemu/Core/WebApplication.hpp
-        ../../include/Nemu/Core/WebRequest.hpp
-        ../../include/Nemu/Core/WebResponseBuilder.hpp
         ../../include/Nemu/Core/AccessLog.h
-        ../../include/Nemu/Core/TemplateEngine.hpp
-        ../../include/Nemu/Core/Web/Route.hpp
-        ../../include/Nemu/Core/Web/Routes.hpp
-        ../../include/Nemu/Core/Web/Views.hpp
-        ../../include/Nemu/Core/Web/RequestHandlers/FileSystemWebRequestHandler.hpp
-        ../../include/Nemu/Core/Web/RequestHandlers/FunctionWebRequestHandler.hpp
-        ../../include/Nemu/Core/Web/RequestHandlers/HardcodedWebRequestHandler.hpp
-        ../../include/Nemu/Core/Web/RequestHandlers/WebRequestHandler.hpp
-
         ../../src/ControlHandlerRegistration.h
     }
 
@@ -68,21 +57,12 @@ library NemuCore : IshikoNetworking, IshikoFileSystem, IshikoTime, IshikoLogging
     {
         ../../src/Configuration.cpp
         ../../src/ControlHandlerRegistration.cpp
+        ../../src/Connection.cpp
         ../../src/Application.cpp
         ../../src/Applications.cpp
         ../../src/NemuErrorCategory.cpp
         ../../src/Server.cpp
         ../../src/Servers.cpp
-        ../../src/WebApplication.cpp
-        ../../src/WebRequest.cpp
-        ../../src/WebResponseBuilder.cpp
         ../../src/AccessLog.cpp
-        ../../src/TemplatingEngine.cpp
-        ../../src/Web/Route.cpp
-        ../../src/Web/Routes.cpp
-        ../../src/Web/Views.cpp
-        ../../src/Web/RequestHandlers/FileSystemWebRequestHandler.cpp
-        ../../src/Web/RequestHandlers/FunctionWebRequestHandler.cpp
-        ../../src/Web/RequestHandlers/HardcodedWebRequestHandler.cpp
     }
 }
