@@ -15,6 +15,7 @@
 #include "Core/Connection.hpp"
 #include "Core/NemuErrorCategory.hpp"
 #include "Core/linkoptions.hpp"
+#include "Core/LoggingMacros.hpp"
 #include "Core/Server.hpp"
 #include "Core/Servers.hpp"
 

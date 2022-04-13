@@ -8,7 +8,6 @@
 #define _NEMU_CPP_CORE_SERVER_HPP_
 
 #include "Connection.hpp"
-#include <Ishiko/Logging.hpp>
 #include <vector>
 #include <string>
 #include <memory>
@@ -127,7 +126,6 @@ public:
 
 public:
     ConnectionHandler* m_connectionHandler;
-    Ishiko::Logger* m_logger;
 
 private:
     Observers m_observers;
