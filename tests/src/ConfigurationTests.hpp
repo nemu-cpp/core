@@ -4,10 +4,10 @@
     See https://github.com/nemu-cpp/core/blob/main/LICENSE.txt
 */
 
-#ifndef _NEMU_CPP_CORE_TESTS_CONFIGURATIONTESTS_H_
-#define _NEMU_CPP_CORE_TESTS_CONFIGURATIONTESTS_H_
+#ifndef _NEMU_CPP_CORE_TESTS_CONFIGURATIONTESTS_HPP_
+#define _NEMU_CPP_CORE_TESTS_CONFIGURATIONTESTS_HPP_
 
-#include <Ishiko/Tests.hpp>
+#include <Ishiko/TestFramework.hpp>
 
 class ConfigurationTests : public Ishiko::TestSequence
 {

@@ -8,7 +8,7 @@
 #define _NEMU_CPP_CORE_COMPILEOPTIONS_HPP_
 
 #ifndef NEMU_MAX_LOG_LEVEL
-#define NEMU_MAX_LOG_LEVEL Ishiko::Logger::Level::info
+#define NEMU_MAX_LOG_LEVEL Ishiko::LogLevel::info
 #endif
 
 #endif

@@ -4,9 +4,9 @@
     See https://github.com/nemu-cpp/core/blob/main/LICENSE.txt
 */
 
-#include "ConfigurationTests.h"
+#include "ConfigurationTests.hpp"
 #include "Nemu/Core/linkoptions.hpp"
-#include <Ishiko/Tests.hpp>
+#include <Ishiko/TestFramework.hpp>
 
 using namespace Ishiko;
 
