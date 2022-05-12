@@ -160,7 +160,7 @@
     <ClCompile Include="..\..\src\ConfigurationTests.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\src\ConfigurationTests.h" />
+    <ClInclude Include="..\..\src\ConfigurationTests.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

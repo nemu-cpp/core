@@ -4,7 +4,7 @@
     See https://github.com/nemu-cpp/core/blob/main/LICENSE.txt
 */
 
-#include "ConfigurationTests.h"
+#include "ConfigurationTests.hpp"
 #include "Nemu/Core/Configuration.h"
 
 using namespace Ishiko;
