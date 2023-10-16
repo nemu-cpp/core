@@ -20,10 +20,26 @@ const char* NemuErrorCategory::name() const noexcept
     return "NemuErrorCategory";
 }
 
-void Fail(Ishiko::Error& error, NemuErrorCategory::EErrorValues value, const std::string& message, const char* file,
+
+std::ostream& NemuErrorCategory::streamOut(int value, std::ostream& os) const
+{
+    switch (static_cast<Value>(value))
+    {
+    case Value::generic_error:
+        os << "generic error";
+        break;
+
+    default:
+        os << "unknown value";
+        break;
+    }
+    return os;
+}
+
+void Fail(Ishiko::Error& error, NemuErrorCategory::Value value, const std::string& message, const char* file,
     int line) noexcept
 {
-    error.fail(value, NemuErrorCategory::Get(), message, file, line);
+    error.fail(NemuErrorCategory::Get(), static_cast<int>(value), message, file, line);
 }
 
 }
