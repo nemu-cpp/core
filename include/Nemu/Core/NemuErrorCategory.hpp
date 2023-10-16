@@ -15,20 +15,21 @@ namespace Nemu
 class NemuErrorCategory : public Ishiko::ErrorCategory
 {
 public:
-    enum EErrorValues
+    enum class Value
     {
-        eGeneric = -1
+        generic_error = -1
     };
 
     static const NemuErrorCategory& Get() noexcept;
 
     const char* name() const noexcept override;
+    std::ostream& streamOut(int value, std::ostream& os) const override;
 
 private:
     NemuErrorCategory() noexcept = default;
 };
 
-void Fail(Ishiko::Error& error, NemuErrorCategory::EErrorValues value, const std::string& message, const char* file,
+void Fail(Ishiko::Error& error, NemuErrorCategory::Value value, const std::string& message, const char* file,
     int line) noexcept;
 
 }
