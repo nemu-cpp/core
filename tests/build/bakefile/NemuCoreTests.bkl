@@ -19,7 +19,7 @@ program NemuCoreTests : NemuCore, IshikoTestFramework
     if ($(toolset) == gnu)
     {
         cxx-compiler-options = "-std=c++11";
-        libs += NemuCore IshikoNetworking IshikoTestFramework IshikoTestFrameworkCore IshikoConfiguration IshikoDiff IshikoXML IshikoFileSystem IshikoIO IshikoProcess IshikoTime IshikoText IshikoLogging IshikoMemory IshikoErrors;
+        libs += NemuCore IshikoNetworking IshikoTestFramework IshikoTestFrameworkCore IshikoConfiguration IshikoDiff IshikoXML IshikoFileSystem IshikoIO IshikoProcess IshikoTime IshikoText IshikoLogging IshikoMemory IshikoErrors IshikoBasePlatform;
         libs += fmt boost_program_options boost_filesystem;
     }
 
