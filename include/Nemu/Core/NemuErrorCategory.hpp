@@ -1,11 +1,11 @@
 /*
-    Copyright (c) 2021-2022 Xavier Leclercq
+    Copyright (c) 2021-2024 Xavier Leclercq
     Released under the MIT License
     See https://github.com/nemu-cpp/core/blob/main/LICENSE.txt
 */
 
-#ifndef _NEMU_CPP_CORE_NEMUERRORCATEGORY_HPP_
-#define _NEMU_CPP_CORE_NEMUERRORCATEGORY_HPP_
+#ifndef GUARD_NEMU_CPP_CORE_NEMUERRORCATEGORY_HPP
+#define GUARD_NEMU_CPP_CORE_NEMUERRORCATEGORY_HPP
 
 #include <Ishiko/Errors.hpp>
 
@@ -23,7 +23,7 @@ public:
     static const NemuErrorCategory& Get() noexcept;
 
     const char* name() const noexcept override;
-    std::ostream& streamOut(int value, std::ostream& os) const override;
+    const char* message(int ev, char* buffer, size_t len) const noexcept override;
 
 private:
     NemuErrorCategory() noexcept = default;
