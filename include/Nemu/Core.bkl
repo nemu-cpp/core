@@ -9,7 +9,7 @@ import $(ishikopath)/time/include/Ishiko/Time.bkl;
 setting NEMU_CPP_CORE_ROOT
 {
     help = "Path to the Nemu installation";
-    default = '$(NEMU_CPP)/core';
+    default = '$(NEMU_CPP_ROOT)/core';
 }
 
 template NemuCore : IshikoNetworking, IshikoFileSystem, IshikoTime, IshikoLogging, IshikoErrors, Boost
