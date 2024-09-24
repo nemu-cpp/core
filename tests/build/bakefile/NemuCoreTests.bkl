@@ -1,6 +1,6 @@
 ishikopath = envvar("ISHIKO_CPP_ROOT");
 import $(ishikopath)/test-framework/include/Ishiko/TestFramework.bkl;
-nemupath = envvar("NEMU_CPP");
+nemupath = envvar("NEMU_CPP_ROOT");
 import $(nemupath)/core/include/Nemu/Core.bkl;
 
 toolsets = gnu vs2022 vs2019 vs2017 vs2015 vs2013;
