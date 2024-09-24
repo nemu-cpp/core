@@ -119,7 +119,7 @@ ISHIKO_CPP_BOTAN_ROOT ?= $(BOTAN_ROOT)
 # Path to the Ishiko/C++ Networking installation
 ISHIKO_CPP_NETWORKING_ROOT ?= $(ISHIKO_CPP_ROOT)/networking
 # Path to the Nemu installation
-NEMU_CPP_CORE_ROOT ?= $(NEMU_CPP)/core
+NEMU_CPP_CORE_ROOT ?= $(NEMU_CPP_ROOT)/core
 
 # ------------
 
