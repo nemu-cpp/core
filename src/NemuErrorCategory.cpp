@@ -1,5 +1,5 @@
 /*
-    Copyright (c) 2021-2022 Xavier Leclercq
+    Copyright (c) 2021-2024 Xavier Leclercq
     Released under the MIT License
     See https://github.com/nemu-cpp/core/blob/main/LICENSE.txt
 */
@@ -21,19 +21,16 @@ const char* NemuErrorCategory::name() const noexcept
 }
 
 
-std::ostream& NemuErrorCategory::streamOut(int value, std::ostream& os) const
+const char* NemuErrorCategory::message(int ev, char* buffer, size_t len) const noexcept
 {
-    switch (static_cast<Value>(value))
+    switch (static_cast<Value>(ev))
     {
     case Value::generic_error:
-        os << "generic error";
-        break;
+        return "generic error";
 
     default:
-        os << "unknown value";
-        break;
+        return "unknown value";
     }
-    return os;
 }
 
 void Fail(Ishiko::Error& error, NemuErrorCategory::Value value, const std::string& message, const char* file,
