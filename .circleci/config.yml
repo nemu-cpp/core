@@ -11,10 +11,10 @@ jobs:
           path: /workspace/projects/nemu/cpp/core
       - run:
           name: Build Core
-          command: cd /workspace/projects/nemu/cpp/core/build/gnumake && make
+          command: cd /workspace/projects/nemu/cpp/core/build-files/gnumake && make
       - run:
           name: "Test: Core"
-          command: cd /workspace/projects/nemu/cpp/core/tests/build/gnumake && make && ./NemuCoreTests
+          command: cd /workspace/projects/nemu/cpp/core/tests/build-files/gnumake && make && ./NemuCoreTests
 workflows:
   version: 2
   continuous_build:
