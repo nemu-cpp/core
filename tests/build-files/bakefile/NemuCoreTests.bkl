@@ -3,14 +3,13 @@ import $(ishikopath)/test-framework/include/Ishiko/TestFramework.bkl;
 nemupath = envvar("NEMU_CPP_ROOT");
 import $(nemupath)/core/include/Nemu/Core.bkl;
 
-toolsets = gnu vs2022 vs2019 vs2017 vs2015 vs2013;
+toolsets = gnu vs2022 vs2019 vs2017 vs2015;
 
 gnu.makefile = ../gnumake/GNUmakefile;
 vs2022.solutionfile = ../vc17/NemuCoreTests.sln;
 vs2019.solutionfile = ../vc16/NemuCoreTests.sln;
 vs2017.solutionfile = ../vc15/NemuCoreTests.sln;
 vs2015.solutionfile = ../vc14/NemuCoreTests.sln;
-vs2013.solutionfile = ../vc12/NemuCoreTests.sln;
 
 program NemuCoreTests : NemuCore, IshikoTestFramework
 {

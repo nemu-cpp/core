@@ -2,19 +2,19 @@ version: 2
 jobs:
   build:
     docker:
-      - image: ishiko/gcc-ishiko-cpp:0.41.0
+      - image: ishiko/gcc-ishiko-cpp:0.43.0
     steps:
       - run: 
           name: "Set NEMU_CPP_ROOT environment variable and create workspace directory"
-          command: mkdir -p /projects/nemu/cpp && echo 'export NEMU_CPP_ROOT="/projects/nemu/cpp"' >> $BASH_ENV
+          command: mkdir -p /workspace/projects/nemu/cpp && echo 'export NEMU_CPP_ROOT="/workspace/projects/nemu/cpp"' >> $BASH_ENV
       - checkout:
-          path: /projects/nemu/cpp/core
+          path: /workspace/projects/nemu/cpp/core
       - run:
           name: Build Core
-          command: cd /projects/nemu/cpp/core/build/gnumake && make
+          command: cd /workspace/projects/nemu/cpp/core/build-files/gnumake && make
       - run:
           name: "Test: Core"
-          command: cd /projects/nemu/cpp/core/tests/build/gnumake && make && ./NemuCoreTests
+          command: cd /workspace/projects/nemu/cpp/core/tests/build-files/gnumake && make && ./NemuCoreTests
 workflows:
   version: 2
   continuous_build:
